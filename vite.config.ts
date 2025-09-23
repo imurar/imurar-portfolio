@@ -5,6 +5,5 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   plugins: [tailwindcss(), tsconfigPaths(), react()],
-  //base: "/imurar-portfolio/",
-  base: "/",
+  base: "/imurar-portfolio/",
 });
