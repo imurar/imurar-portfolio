@@ -103,7 +103,8 @@ function buildHero() {
 
   const sectionWidth = heroSection.value.offsetWidth
   const fontSize = Math.min(Math.floor(sectionWidth / 4.5), 160)
-  const spacing = Math.max(4, Math.floor(fontSize / 24))
+  const spacing = Math.max(7, Math.floor(fontSize / 16))
+  const symbolSize = spacing + 1
 
   const offscreen = document.createElement('canvas')
   const ctx = offscreen.getContext('2d')
@@ -134,15 +135,20 @@ function buildHero() {
       if (data[i + 3] > 100) {
         const span = document.createElement('span')
         span.textContent = '✻'
+        const speed = (1.2 + Math.random() * 2).toFixed(2)
+        const delay = -(Math.random() * 3).toFixed(2)
+        const opacity = (0.6 + Math.random() * 0.4).toFixed(2)
         span.style.cssText = `
           position: absolute;
           left: ${offsetX + x}px;
           top: ${y}px;
-          font-size: ${spacing + 1}px;
+          font-size: ${symbolSize}px;
           line-height: 1;
           color: #fff;
-          animation: symSpin ${(1.5 + Math.random() * 2).toFixed(2)}s linear infinite;
-          animation-delay: -${(Math.random() * 2).toFixed(2)}s;
+          opacity: ${opacity};
+          will-change: transform;
+          animation: symSpin ${speed}s linear infinite;
+          animation-delay: ${delay}s;
         `
         fragment.appendChild(span)
       }
@@ -168,7 +174,7 @@ onUnmounted(() => {
 })
 </script>
 
-<style scoped>
+<style>
 @keyframes symSpin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
