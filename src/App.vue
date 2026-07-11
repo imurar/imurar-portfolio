@@ -6,6 +6,7 @@
         <router-link to="/" class="text-xl font-bold hover:text-gray-300 transition font-mono tracking-tight">&lt; imurar /&gt;</router-link>
         <ul class="flex gap-4 md:gap-8 text-sm md:text-base">
           <li><router-link to="/" class="hover:text-gray-300 transition" active-class="text-white" exact-active-class="text-gray-300">Home</router-link></li>
+          <li><router-link to="/profile" class="hover:text-gray-300 transition" active-class="text-gray-300">Profile</router-link></li>
           <li><router-link to="/projects" class="hover:text-gray-300 transition" active-class="text-gray-300">Projects</router-link></li>
           <li class="hidden sm:block"><router-link to="/demo" class="hover:text-gray-300 transition" active-class="text-gray-300">Demo</router-link></li>
           <li><router-link to="/contact" class="hover:text-gray-300 transition" active-class="text-gray-300">Contact</router-link></li>
