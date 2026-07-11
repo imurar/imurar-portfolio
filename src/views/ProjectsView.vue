@@ -75,7 +75,7 @@ const projects = [
       'Amazon DocumentDB への MongoDB 移行（TLS/SSL 対応）',
       '本番・STG が同居していた EC2 を分離し独立したステージング環境を構築',
     ],
-    tech: ['Node.js', 'Socket.IO', 'MongoDB', 'AWS DocumentDB', 'Express', 'Pug'],
+    tech: ['Node.js', 'Socket.IO', 'MongoDB', 'AWS DocumentDB', 'Express', 'Pug', 'SCSS'],
   },
   {
     title: 'POS システム外部連動機能開発',
