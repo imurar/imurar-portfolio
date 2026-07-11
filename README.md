@@ -1,72 +1,54 @@
 # imurar ポートフォリオサイト
 
-Astro + Tailwind CSS で構築したポートフォリオサイトです。
+Vue 3 + Vite + Tailwind CSS で構築したポートフォリオサイトです。
 
-## 📋 プロジェクト構成
+## プロジェクト構成
 
-```text
-/
-├── public/              # 静的ファイル（画像など）
-├── src/
-│   ├── pages/          # ページコンポーネント
-│   ├── components/     # 再利用可能なコンポーネント
-│   └── styles/         # グローバルスタイル
-└── package.json
+```
+src/
+├── App.vue          # ルートコンポーネント（ナビ・フッター）
+├── main.js          # エントリポイント・ルーター設定
+├── assets/          # グローバルCSS
+└── views/           # ページコンポーネント
+    ├── HomeView.vue
+    ├── ProjectsView.vue
+    ├── ContactView.vue
+    ├── ContactThanksView.vue
+    └── demo/
+        ├── DemoView.vue
+        ├── UiView.vue
+        ├── AnimationView.vue
+        ├── CounterView.vue
+        └── TodoView.vue
 ```
 
-## 🚀 セットアップ
-
-### 前提条件
-- Node.js 18.x 以上
-
-### インストール
+## セットアップ
 
 ```bash
 npm install
 ```
 
-## 💻 開発
+## 開発
 
-### 開発サーバー起動
 ```bash
 npm run dev
 ```
 
-ブラウザで `http://localhost:4321` を開きます。
+`http://localhost:5173` で確認できます。
 
-### ビルド
+## ビルド
+
 ```bash
 npm run build
 ```
 
-本番用ビルドは `dist/` ディレクトリに生成されます。
+## 使用技術
 
-### プレビュー
-```bash
-npm run preview
-```
+- **Vue 3** - フロントエンドフレームワーク
+- **Vue Router** - クライアントサイドルーティング（Hash モード）
+- **Vite** - ビルドツール
+- **Tailwind CSS v4** - ユーティリティ CSS フレームワーク
 
-ビルド結果をローカルで確認できます。
+## デプロイ
 
-## 🌐 デプロイ
-
-GitHub Pages にデプロイします：
-
-```bash
-npm run deploy
-```
-
-## 📚 使用技術
-
-- **Astro** - 静的サイトジェネレータ
-- **Tailwind CSS** - ユーティリティ CSS フレームワーク
-- **TypeScript** - 型安全な JavaScript
-
-## 📖 ドキュメント
-
-- [Astro Documentation](https://docs.astro.build)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-
-## 📝 ライセンス
-
-MIT
+GitHub Actions で GitHub Pages に自動デプロイ。`main` ブランチへの push で発火。
