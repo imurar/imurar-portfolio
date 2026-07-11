@@ -11,7 +11,7 @@
       >
         <input type="hidden" name="_subject" value="ポートフォリオからのお問い合わせ" />
         <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_next" value="https://imurar.github.io/imurar-portfolio/#/contact-thanks" />
+        <input type="hidden" name="_next" value="https://imurar.github.io/#/contact-thanks" />
 
         <div>
           <label for="name" class="block text-sm font-medium text-gray-700 mb-1">お名前 <span class="text-red-500">*</span></label>
