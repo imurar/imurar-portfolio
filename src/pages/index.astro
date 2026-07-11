@@ -3,14 +3,75 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="imurar - ポートフォリオ">
-	<h1 class="text-4xl font-bold mb-6">imurar</h1>
-	<p class="text-lg text-gray-600 mb-8">エンジニア | Node.js / Kotlin / AWS</p>
-
-	<section class="mb-12">
-		<h2 class="text-2xl font-bold mb-4">概要</h2>
-		<p class="text-gray-700 mb-4">
-			飲食店向けシステム開発を手掛ける企業で SE として勤務しています。
-			バックエンド・フロントエンド・インフラまで幅広く対応しています。
+	<!-- ヒーロー -->
+	<section class="mb-16">
+		<h1 class="text-5xl font-bold mb-4">imurar</h1>
+		<p class="text-xl text-gray-600 mb-8">フルスタックエンジニア | Node.js / Kotlin / AWS</p>
+		<p class="text-gray-700 leading-relaxed">
+			飲食店向けシステム開発を手掛ける企業で SE として勤務。
+			バックエンド・フロントエンド・インフラまで幅広く対応し、
+			0 から 1 の新規開発から既存システムの保守・改修まで経験。
 		</p>
+	</section>
+
+	<!-- スキル -->
+	<section class="mb-16">
+		<h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-gray-300">スキル</h2>
+
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+			<div>
+				<h3 class="text-lg font-bold mb-3">バックエンド</h3>
+				<ul class="text-gray-700 space-y-1">
+					<li>• Node.js / Express</li>
+					<li>• PHP / Laravel</li>
+					<li>• VB.NET</li>
+				</ul>
+			</div>
+			<div>
+				<h3 class="text-lg font-bold mb-3">フロントエンド</h3>
+				<ul class="text-gray-700 space-y-1">
+					<li>• Kotlin / Android</li>
+					<li>• JavaScript / HTML / CSS</li>
+					<li>• Tailwind CSS</li>
+				</ul>
+			</div>
+			<div>
+				<h3 class="text-lg font-bold mb-3">インフラ</h3>
+				<ul class="text-gray-700 space-y-1">
+					<li>• AWS (EC2, S3, DocumentDB)</li>
+					<li>• Docker</li>
+					<li>• Git / CI/CD</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<!-- プロジェクト実績 -->
+	<section class="mb-16">
+		<h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-gray-300">プロジェクト実績</h2>
+
+		<div class="space-y-8">
+			<!-- プロジェクト1 -->
+			<div class="border-l-4 border-blue-500 pl-6">
+				<h3 class="text-lg font-bold mb-2">Android 券売機システム（新規開発）</h3>
+				<p class="text-gray-600 mb-3">0 から 1 で新規開発主導。Kotlin フロントエンド、Node.js バックエンド、ハードウェア連携まで一気通貫。</p>
+				<p class="text-sm text-gray-500">Kotlin / Node.js / MongoDB / AWS</p>
+			</div>
+
+			<!-- プロジェクト2 -->
+			<div class="border-l-4 border-blue-500 pl-6">
+				<h3 class="text-lg font-bold mb-2">テーブルオーダーシステム（保守・改修）</h3>
+				<p class="text-gray-600 mb-3">約 120 店舗展開中のシステムで、Node.js v12 → v24 への複数メジャーバージョンアップを実施。複雑なビジネスロジックの改修にも対応。</p>
+				<p class="text-sm text-gray-500">Node.js / Socket.IO / MongoDB / POS 連携</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- リンク -->
+	<section class="mb-16">
+		<h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-gray-300">リンク</h2>
+		<div class="space-y-2">
+			<p><strong>GitHub:</strong> <a href="https://github.com/imurar" class="text-blue-600 hover:text-blue-800" target="_blank">github.com/imurar</a></p>
+		</div>
 	</section>
 </Layout>
