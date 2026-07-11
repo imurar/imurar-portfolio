@@ -1,0 +1,126 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Layout title="ToDoリスト | Demo | imurar">
+  <section>
+    <div class="flex items-center gap-3 mb-2">
+      <a href={`${base}/demo/`} class="text-sm text-gray-500 hover:text-gray-700 transition">← Demo</a>
+    </div>
+    <h1 class="text-3xl font-bold mb-2">ToDoリスト</h1>
+    <p class="text-gray-600 mb-12">タスクの追加・完了・削除・フィルタリングができるアプリです。</p>
+
+    <div class="max-w-lg border border-gray-200 rounded-xl p-6">
+      <div class="flex gap-2 mb-4">
+        <input
+          id="todo-input"
+          type="text"
+          placeholder="タスクを入力..."
+          class="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-800"
+        />
+        <button id="todo-add"
+          class="px-4 py-2 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-700 transition">
+          追加
+        </button>
+      </div>
+
+      <div class="flex gap-2 mb-4">
+        <button data-filter="all" class="todo-filter px-3 py-1 text-sm rounded-full bg-gray-900 text-white transition">すべて</button>
+        <button data-filter="active" class="todo-filter px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 transition">未完了</button>
+        <button data-filter="done" class="todo-filter px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 transition">完了</button>
+      </div>
+
+      <ul id="todo-list" class="space-y-2 mb-4 min-h-[60px]">
+        <li class="text-sm text-gray-400 text-center py-4" id="todo-empty">タスクがありません</li>
+      </ul>
+
+      <div class="flex justify-between items-center text-sm text-gray-500 border-t pt-3">
+        <span id="todo-count">0 件のタスク</span>
+        <button id="todo-clear" class="hover:text-red-500 transition">完了を削除</button>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  type Todo = { id: number; text: string; done: boolean };
+  let todos: Todo[] = [];
+  let filter: 'all' | 'active' | 'done' = 'all';
+  let nextId = 1;
+
+  const todoInput = document.getElementById('todo-input') as HTMLInputElement;
+  const todoList = document.getElementById('todo-list')!;
+  const todoCount = document.getElementById('todo-count')!;
+  const todoEmpty = document.getElementById('todo-empty')!;
+
+  function renderTodos() {
+    const filtered = todos.filter(t =>
+      filter === 'all' ? true : filter === 'done' ? t.done : !t.done
+    );
+
+    todoList.querySelectorAll('li:not(#todo-empty)').forEach(el => el.remove());
+    todoEmpty.style.display = filtered.length === 0 ? 'block' : 'none';
+
+    filtered.forEach(todo => {
+      const li = document.createElement('li');
+      li.className = 'flex items-center gap-3 p-3 border border-gray-100 rounded-lg hover:bg-gray-50 transition group';
+      li.innerHTML = `
+        <input type="checkbox" ${todo.done ? 'checked' : ''} class="w-4 h-4 accent-gray-900 cursor-pointer" data-id="${todo.id}" />
+        <span class="flex-1 text-sm ${todo.done ? 'line-through text-gray-400' : 'text-gray-800'}">${todo.text}</span>
+        <button class="text-gray-300 hover:text-red-400 transition opacity-0 group-hover:opacity-100 text-lg leading-none" data-delete="${todo.id}">×</button>
+      `;
+      todoList.appendChild(li);
+    });
+
+    todoCount.textContent = `${todos.filter(t => !t.done).length} 件のタスク`;
+  }
+
+  todoList.addEventListener('change', (e) => {
+    const target = e.target as HTMLInputElement;
+    if (target.dataset.id) {
+      const id = parseInt(target.dataset.id);
+      todos = todos.map(t => t.id === id ? { ...t, done: target.checked } : t);
+      renderTodos();
+    }
+  });
+
+  todoList.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    if (target.dataset.delete) {
+      todos = todos.filter(t => t.id !== parseInt(target.dataset.delete!));
+      renderTodos();
+    }
+  });
+
+  document.getElementById('todo-add')?.addEventListener('click', () => {
+    const text = todoInput.value.trim();
+    if (!text) return;
+    todos.push({ id: nextId++, text, done: false });
+    todoInput.value = '';
+    renderTodos();
+  });
+
+  todoInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') document.getElementById('todo-add')?.click();
+  });
+
+  document.getElementById('todo-clear')?.addEventListener('click', () => {
+    todos = todos.filter(t => !t.done);
+    renderTodos();
+  });
+
+  document.querySelectorAll('.todo-filter').forEach(btn => {
+    btn.addEventListener('click', () => {
+      filter = (btn as HTMLElement).dataset.filter as typeof filter;
+      document.querySelectorAll('.todo-filter').forEach(b => {
+        b.className = 'todo-filter px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 transition';
+      });
+      btn.className = 'todo-filter px-3 py-1 text-sm rounded-full bg-gray-900 text-white transition';
+      renderTodos();
+    });
+  });
+
+  renderTodos();
+</script>
