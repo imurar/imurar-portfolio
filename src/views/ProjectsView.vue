@@ -73,7 +73,7 @@ const projects = [
       'Node.js v12 → v24 メジャーバージョンアップ（破壊的変更対応）',
       'Socket.IO v4 / Mongoose 8 / AWS SDK v3 移行対応',
       'Amazon DocumentDB への MongoDB 移行（TLS/SSL 対応）',
-      'ステージング環境構築・systemd 移行',
+      '本番・STG が同居していた EC2 を分離し独立したステージング環境を構築',
     ],
     tech: ['Node.js', 'Socket.IO', 'MongoDB', 'AWS DocumentDB', 'Express', 'Pug'],
   },
