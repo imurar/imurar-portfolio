@@ -5,7 +5,7 @@
     class="relative overflow-hidden flex flex-col items-center justify-center"
     style="min-height: 72vh; background-color: #000;"
   >
-    <div ref="heroSymbols" class="relative w-full" style="min-height: 220px;"></div>
+    <div ref="heroSymbols" class="relative w-full"></div>
     <div class="text-center pb-16 font-mono">
       <p class="text-base tracking-widest text-gray-300 uppercase">Full Stack Engineer</p>
       <p class="text-sm text-gray-500 mt-1 tracking-wider">Node.js · Kotlin · AWS</p>
@@ -102,36 +102,46 @@ function buildHero() {
   heroSymbols.value.innerHTML = ''
 
   const sectionWidth = heroSection.value.offsetWidth
-  const fontSize = Math.min(Math.floor(sectionWidth / 4.5), 160)
+  const lines = ['CODE']
+  const REF = 200
+  const probe = document.createElement('canvas').getContext('2d')
+  probe.font = `900 ${REF}px monospace`
+  const maxLineW = Math.max(...lines.map(l => probe.measureText(l).width))
+  const fontSize = Math.min(200, Math.floor(REF * (sectionWidth * 0.88) / maxLineW))
   const spacing = Math.max(7, Math.floor(fontSize / 16))
   const symbolSize = spacing + 1
+  const lineH = Math.ceil(fontSize * 1.25)
+  const lineGap = Math.floor(fontSize * 0.1)
 
   const offscreen = document.createElement('canvas')
   const ctx = offscreen.getContext('2d')
   if (!ctx) return
 
   ctx.font = `900 ${fontSize}px monospace`
-  const metrics = ctx.measureText('imurar')
-  const textW = Math.ceil(metrics.width) + spacing * 2
-  const textH = Math.ceil(fontSize * 1.3)
+  const lineWidths = lines.map(l => Math.ceil(ctx.measureText(l).width))
+  const canvasW = Math.max(...lineWidths) + spacing * 2
+  const canvasH = lineH * lines.length + lineGap * (lines.length - 1)
 
-  offscreen.width = textW
-  offscreen.height = textH
+  offscreen.width = canvasW
+  offscreen.height = canvasH
   ctx.font = `900 ${fontSize}px monospace`
   ctx.fillStyle = '#000'
-  ctx.fillText('imurar', spacing, fontSize)
+  lines.forEach((line, i) => {
+    const lx = Math.floor((canvasW - lineWidths[i]) / 2)
+    ctx.fillText(line, lx, fontSize + i * (lineH + lineGap))
+  })
 
-  const data = ctx.getImageData(0, 0, textW, textH).data
+  const data = ctx.getImageData(0, 0, canvasW, canvasH).data
 
-  heroSymbols.value.style.height = `${textH + spacing}px`
+  heroSymbols.value.style.height = `${canvasH}px`
   heroSymbols.value.style.position = 'relative'
 
-  const offsetX = Math.max(0, (sectionWidth - textW) / 2)
+  const offsetX = Math.max(0, (sectionWidth - canvasW) / 2)
   const fragment = document.createDocumentFragment()
 
-  for (let y = 0; y < textH; y += spacing) {
-    for (let x = 0; x < textW; x += spacing) {
-      const i = (y * textW + x) * 4
+  for (let y = 0; y < canvasH; y += spacing) {
+    for (let x = 0; x < canvasW; x += spacing) {
+      const i = (y * canvasW + x) * 4
       if (data[i + 3] > 100) {
         const span = document.createElement('span')
         span.textContent = '✻'
