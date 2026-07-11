@@ -1,0 +1,176 @@
+<template>
+  <!-- ヒーロー -->
+  <section
+    ref="heroSection"
+    class="relative overflow-hidden flex flex-col items-center justify-center"
+    style="min-height: 72vh; background-color: #000;"
+  >
+    <div ref="heroSymbols" class="relative w-full" style="min-height: 220px;"></div>
+    <div class="text-center pb-16 font-mono">
+      <p class="text-base tracking-widest text-gray-300 uppercase">Full Stack Engineer</p>
+      <p class="text-sm text-gray-500 mt-1 tracking-wider">Node.js · Kotlin · AWS</p>
+    </div>
+  </section>
+
+  <!-- コンテンツ -->
+  <div class="max-w-4xl mx-auto px-6 py-12 w-full">
+    <!-- スキル -->
+    <section class="mb-16 mt-4">
+      <h2 class="text-2xl font-bold mb-6 pb-2 border-b-2 border-gray-200">Skills</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-widest text-gray-500 mb-3">Backend</h3>
+          <div class="flex flex-wrap gap-2">
+            <span v-for="s in ['Node.js', 'Express', 'PHP', 'Laravel', 'CakePHP', 'VB.NET']" :key="s"
+              class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">{{ s }}</span>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-widest text-gray-500 mb-3">Frontend / Mobile</h3>
+          <div class="flex flex-wrap gap-2">
+            <span v-for="s in ['Kotlin', 'Android', 'JavaScript', 'HTML', 'CSS', 'Tailwind CSS', 'Vue.js']" :key="s"
+              class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">{{ s }}</span>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-widest text-gray-500 mb-3">Infra / Tools</h3>
+          <div class="flex flex-wrap gap-2">
+            <span v-for="s in ['AWS', 'Docker', 'Git', 'CI/CD', 'MongoDB', 'MySQL']" :key="s"
+              class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">{{ s }}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- プロジェクト -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-6 pb-2 border-b-2 border-gray-200">Projects</h2>
+      <div class="space-y-4">
+        <div class="border border-gray-200 rounded-xl p-6 hover:shadow-md transition">
+          <div class="flex justify-between items-start gap-2 mb-2">
+            <h3 class="font-bold">Android 券売機システム（新規開発）</h3>
+            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full shrink-0">新規開発</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-3">飲食店向けセルフオーダー券売機をフルスタックで開発。Kotlin Android アプリから Node.js CMS・AWS インフラまで一気通貫。</p>
+          <div class="flex flex-wrap gap-1">
+            <span v-for="t in ['Kotlin', 'Node.js', 'MongoDB', 'AWS', 'Docker']" :key="t"
+              class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded">{{ t }}</span>
+          </div>
+        </div>
+        <div class="border border-gray-200 rounded-xl p-6 hover:shadow-md transition">
+          <div class="flex justify-between items-start gap-2 mb-2">
+            <h3 class="font-bold">テーブルオーダーシステム（保守・改修）</h3>
+            <span class="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded-full shrink-0">保守・改修</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-3">約 120 店舗展開中のシステムで Node.js v12 → v24 へのメジャーバージョンアップと機能改修を担当。</p>
+          <div class="flex flex-wrap gap-1">
+            <span v-for="t in ['Node.js', 'Socket.IO', 'MongoDB', 'AWS DocumentDB']" :key="t"
+              class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded">{{ t }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4">
+        <router-link to="/projects" class="text-sm text-gray-500 hover:text-gray-800 transition underline underline-offset-4">
+          すべてのプロジェクトを見る →
+        </router-link>
+      </div>
+    </section>
+
+    <!-- リンク -->
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold mb-6 pb-2 border-b-2 border-gray-200">Links</h2>
+      <a href="https://github.com/imurar" target="_blank"
+        class="inline-flex items-center gap-2 text-gray-700 hover:text-gray-900 transition">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+        github.com/imurar
+      </a>
+    </section>
+  </div>
+</template>
+
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+
+const heroSection = ref(null)
+const heroSymbols = ref(null)
+let resizeTimer = null
+
+function buildHero() {
+  if (!heroSymbols.value || !heroSection.value) return
+  heroSymbols.value.innerHTML = ''
+
+  const sectionWidth = heroSection.value.offsetWidth
+  const fontSize = Math.min(Math.floor(sectionWidth / 4.5), 160)
+  const spacing = Math.max(4, Math.floor(fontSize / 24))
+
+  const offscreen = document.createElement('canvas')
+  const ctx = offscreen.getContext('2d')
+  if (!ctx) return
+
+  ctx.font = `900 ${fontSize}px monospace`
+  const metrics = ctx.measureText('imurar')
+  const textW = Math.ceil(metrics.width) + spacing * 2
+  const textH = Math.ceil(fontSize * 1.3)
+
+  offscreen.width = textW
+  offscreen.height = textH
+  ctx.font = `900 ${fontSize}px monospace`
+  ctx.fillStyle = '#000'
+  ctx.fillText('imurar', spacing, fontSize)
+
+  const data = ctx.getImageData(0, 0, textW, textH).data
+
+  heroSymbols.value.style.height = `${textH + spacing}px`
+  heroSymbols.value.style.position = 'relative'
+
+  const offsetX = Math.max(0, (sectionWidth - textW) / 2)
+  const fragment = document.createDocumentFragment()
+
+  for (let y = 0; y < textH; y += spacing) {
+    for (let x = 0; x < textW; x += spacing) {
+      const i = (y * textW + x) * 4
+      if (data[i + 3] > 100) {
+        const span = document.createElement('span')
+        span.textContent = '✻'
+        span.style.cssText = `
+          position: absolute;
+          left: ${offsetX + x}px;
+          top: ${y}px;
+          font-size: ${spacing + 1}px;
+          line-height: 1;
+          color: #fff;
+          animation: symSpin ${(1.5 + Math.random() * 2).toFixed(2)}s linear infinite;
+          animation-delay: -${(Math.random() * 2).toFixed(2)}s;
+        `
+        fragment.appendChild(span)
+      }
+    }
+  }
+
+  heroSymbols.value.appendChild(fragment)
+}
+
+function onResize() {
+  clearTimeout(resizeTimer)
+  resizeTimer = setTimeout(buildHero, 200)
+}
+
+onMounted(() => {
+  buildHero()
+  window.addEventListener('resize', onResize)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', onResize)
+  clearTimeout(resizeTimer)
+})
+</script>
+
+<style scoped>
+@keyframes symSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+</style>

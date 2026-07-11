@@ -1,0 +1,41 @@
+<template>
+  <div class="max-w-4xl mx-auto px-6 py-12 w-full">
+    <section class="max-w-xl mx-auto">
+      <h1 class="text-3xl font-bold mb-2">Contact</h1>
+      <p class="text-gray-600 mb-8">お仕事のご依頼・ご相談はこちらからお気軽にどうぞ。</p>
+
+      <form
+        action="https://formsubmit.co/970f5070ee9d32a17c76a53ed47d36dd"
+        method="POST"
+        class="flex flex-col gap-6"
+      >
+        <input type="hidden" name="_subject" value="ポートフォリオからのお問い合わせ" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://imurar.github.io/imurar-portfolio/#/contact-thanks" />
+
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700 mb-1">お名前 <span class="text-red-500">*</span></label>
+          <input type="text" id="name" name="name" required placeholder="山田 太郎"
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-800" />
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">メールアドレス <span class="text-red-500">*</span></label>
+          <input type="email" id="email" name="email" required placeholder="example@email.com"
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-800" />
+        </div>
+
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-700 mb-1">メッセージ <span class="text-red-500">*</span></label>
+          <textarea id="message" name="message" required rows="6" placeholder="ご依頼内容・ご相談内容をご記入ください"
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-800 resize-none"></textarea>
+        </div>
+
+        <button type="submit"
+          class="bg-gray-900 text-white font-semibold py-3 px-8 rounded-lg hover:bg-gray-700 transition w-full">
+          送信する
+        </button>
+      </form>
+    </section>
+  </div>
+</template>

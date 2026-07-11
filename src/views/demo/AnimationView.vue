@@ -1,18 +1,9 @@
----
-import Layout from '../../layouts/Layout.astro';
-
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
----
-
-<Layout title="CSS アニメーション | Demo | imurar">
-  <section>
-    <div class="flex items-center gap-3 mb-2">
-      <a href={`${base}/demo/`} class="text-sm text-gray-500 hover:text-gray-700 transition">← Demo</a>
-    </div>
-    <h1 class="text-3xl font-bold mb-2">CSS アニメーション</h1>
+<template>
+  <div class="max-w-4xl mx-auto px-6 py-12 w-full">
+    <router-link to="/demo" class="text-sm text-gray-500 hover:text-gray-700 transition">← Demo</router-link>
+    <h1 class="text-3xl font-bold mt-2 mb-2">CSS アニメーション</h1>
     <p class="text-gray-600 mb-12">フェードイン・スライド・ホバーエフェクト・ローディングのデモです。</p>
 
-    <!-- フェードイン -->
     <div class="mb-10">
       <h2 class="text-lg font-semibold mb-4 text-gray-700">フェードイン</h2>
       <div class="flex flex-wrap gap-4">
@@ -22,7 +13,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       </div>
     </div>
 
-    <!-- スライドイン -->
     <div class="mb-10">
       <h2 class="text-lg font-semibold mb-4 text-gray-700">スライドイン</h2>
       <div class="space-y-3 overflow-hidden">
@@ -31,7 +21,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       </div>
     </div>
 
-    <!-- ホバーエフェクト -->
     <div class="mb-10">
       <h2 class="text-lg font-semibold mb-4 text-gray-700">ホバーエフェクト</h2>
       <div class="flex flex-wrap gap-4">
@@ -42,7 +31,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       </div>
     </div>
 
-    <!-- ローディング -->
     <div class="mb-10">
       <h2 class="text-lg font-semibold mb-4 text-gray-700">ローディング</h2>
       <div class="flex flex-wrap items-center gap-8">
@@ -58,7 +46,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       </div>
     </div>
 
-    <!-- パルス・点滅 -->
     <div class="mb-10">
       <h2 class="text-lg font-semibold mb-4 text-gray-700">パルス・点滅</h2>
       <div class="flex flex-wrap items-center gap-6">
@@ -70,28 +57,28 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <div class="w-3 h-3 bg-blue-500 rounded-full animate-ping"></div>
       </div>
     </div>
-  </section>
-</Layout>
+  </div>
+</template>
 
-<style>
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes slideLeft {
-    from { opacity: 0; transform: translateX(-60px); }
-    to { opacity: 1; transform: translateX(0); }
-  }
-  @keyframes slideRight {
-    from { opacity: 0; transform: translateX(60px); }
-    to { opacity: 1; transform: translateX(0); }
-  }
-  @keyframes progress {
-    0% { width: 0%; }
-    100% { width: 100%; }
-  }
-  .animate-fade { opacity: 0; animation: fadeIn 0.8s ease forwards; }
-  .animate-slide-left { opacity: 0; animation: slideLeft 0.6s ease forwards; }
-  .animate-slide-right { opacity: 0; animation: slideRight 0.6s ease forwards; }
-  .animate-progress { animation: progress 2s ease-in-out infinite; }
+<style scoped>
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes progress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+.animate-fade { opacity: 0; animation: fadeIn 0.8s ease forwards; }
+.animate-slide-left { opacity: 0; animation: slideLeft 0.6s ease forwards; }
+.animate-slide-right { opacity: 0; animation: slideRight 0.6s ease forwards; }
+.animate-progress { animation: progress 2s ease-in-out infinite; }
 </style>
