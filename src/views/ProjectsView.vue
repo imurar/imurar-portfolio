@@ -63,12 +63,12 @@ const projects = [
     tech: ['Kotlin', 'Node.js', 'Express', 'MongoDB', 'AWS EC2', 'S3', 'Docker', 'Bitbucket Pipelines'],
   },
   {
-    title: 'テーブルオーダーシステム（保守・改修）',
+    title: 'モバイルオーダーシステム（保守・改修）',
     company: '飲食店向けシステム開発会社',
     period: '2025年10月 〜 現在',
     type: '保守・機能改修',
     typeColor: 'bg-green-100 text-green-800',
-    description: '飲食店向け QR コードテーブルオーダーシステム。約 120 店舗展開中のシステムで、Node.js v12 → v24 へのメジャーバージョンアップと機能改修を担当。',
+    description: '飲食店向け QR コードモバイルオーダーシステム。約 120 店舗展開中のシステムで、Node.js v12 → v24 へのメジャーバージョンアップと機能改修を担当。',
     achievements: [
       'Node.js v12 → v24 メジャーバージョンアップ（破壊的変更対応）',
       'Socket.IO v4 / Mongoose 8 / AWS SDK v3 移行対応',
@@ -83,7 +83,7 @@ const projects = [
     period: '2025年10月 〜 現在',
     type: '機能追加',
     typeColor: 'bg-purple-100 text-purple-800',
-    description: 'VB.NET 製飲食店向け POS システムへの外部 API 連動機能を実装。Android 券売機・テーブルオーダーとのリアルタイム連携を実現。',
+    description: 'VB.NET 製飲食店向け POS システムへの外部 API 連動機能を実装。Android 券売機・モバイルオーダーとのリアルタイム連携を実現。',
     achievements: [
       '売上データ取得・メニュー同期・割引同期 API 連携（OAuth2）',
       '卓管理・メニュー同期・Socket.IO イベント配信（HTTP Digest 認証）',

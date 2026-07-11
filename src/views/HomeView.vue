@@ -59,7 +59,7 @@
         </div>
         <div class="border border-gray-200 rounded-xl p-6 hover:shadow-md transition">
           <div class="flex justify-between items-start gap-2 mb-2">
-            <h3 class="font-bold">テーブルオーダーシステム（保守・改修）</h3>
+            <h3 class="font-bold">モバイルオーダーシステム（保守・改修）</h3>
             <span class="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded-full shrink-0">保守・改修</span>
           </div>
           <p class="text-sm text-gray-600 mb-3">約 120 店舗展開中のシステムで Node.js v12 → v24 へのメジャーバージョンアップと機能改修を担当。</p>
