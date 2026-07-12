@@ -3,26 +3,8 @@
     <h1 class="text-3xl font-bold mb-12">Profile</h1>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- 左側：経歴・趣味 -->
+      <!-- 左側：趣味 -->
       <div>
-        <!-- 経歴概要 -->
-        <div class="bg-gray-50 rounded-xl p-8 mb-8">
-          <h2 class="text-2xl font-bold mb-6">経歴</h2>
-          <p class="text-gray-700 leading-relaxed">
-            バックエンド・フロントエンド・インフラまで幅広く対応するフルスタックエンジニア。
-            0からの新規開発〜保守・改修まで経験。
-          </p>
-          <p class="text-gray-700 leading-relaxed mt-4">
-            Kotlin / Node.js / PHP などの言語、Express / Laravel などのフレームワークを使用。
-            AWS・Docker などのクラウド・インフラ技術も担当しています。
-          </p>
-          <div class="mt-6">
-            <router-link to="/projects" class="inline-block bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition">
-              詳しい実績を見る →
-            </router-link>
-          </div>
-        </div>
-
         <!-- 趣味 -->
         <div class="bg-gray-50 rounded-xl p-8">
           <h2 class="text-2xl font-bold mb-6">趣味・興味</h2>
