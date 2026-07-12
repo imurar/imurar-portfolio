@@ -52,7 +52,7 @@
             step="5"
             class="w-full h-2 rounded-lg appearance-none cursor-pointer"
             :style="{
-              background: `linear-gradient(to right, ${getRgba(color, opacity)}, ${getRgba(color, 0)})`
+              background: `linear-gradient(to right, ${color} 0%, ${color} ${opacity}%, #d1d5db ${opacity}%, #d1d5db 100%)`
             }"
           >
           <div class="flex justify-between text-xs text-gray-500 mt-2">
@@ -80,41 +80,31 @@
         <!-- Code Display -->
         <div class="bg-gray-900 rounded-lg p-6 text-white font-mono text-sm overflow-x-auto">
           <p class="text-gray-400 mb-2">// CSS の実装例</p>
-          <p>safe-area-inset-top: {{ getSafeAreaCSS() }}</p>
-          <p class="text-gray-500 mt-4">background-color: {{ color }};</p>
-          <p class="text-gray-500">opacity: {{ (opacity / 100).toFixed(2) }};</p>
+          <p>padding-top: {{ getSafeAreaCSS() }};</p>
+          <p class="text-gray-500 mt-4">background: {{ getRgba(color, opacity) }};</p>
         </div>
 
-        <!-- Info -->
-        <div class="mt-8 p-4 bg-blue-50 border-l-4 border-blue-500 rounded">
-          <p class="text-sm text-gray-700">
-            <strong>ℹ️ セーフエリアについて：</strong><br>
-            iPhone のノッチ、Dynamic Island、Android の丸角などの影響を受けない安全領域です。
-            <code class="bg-gray-200 px-2 py-1 rounded text-xs">env(safe-area-inset-*)</code>
-            CSS 関数を使用して、画面端の余白を自動計算します。
-          </p>
-        </div>
       </div>
 
-      <!-- Device Preview Tips -->
+      <!-- Usage Tips -->
       <div class="mt-8 bg-white rounded-xl shadow-md p-8">
-        <h3 class="text-lg font-bold mb-4">動作確認のコツ</h3>
+        <h3 class="text-lg font-bold mb-4">使い方</h3>
         <ul class="space-y-2 text-gray-700">
           <li class="flex gap-2">
             <span class="text-blue-500 font-bold">•</span>
-            <span>スマートフォンでの確認が最も効果的です（特に iPhone）</span>
+            <span>色ピッカーか プリセット色ボタンで背景色を変更</span>
           </li>
           <li class="flex gap-2">
             <span class="text-blue-500 font-bold">•</span>
-            <span>Chrome DevTools でモバイルデバイスをシミュレートして確認できます</span>
+            <span>透明度スライダーで透明さを調整</span>
           </li>
           <li class="flex gap-2">
             <span class="text-blue-500 font-bold">•</span>
-            <span>回転（Portrait / Landscape）により、セーフエリアが動的に変わります</span>
+            <span>上のセーフエリアに反映される動作を確認</span>
           </li>
           <li class="flex gap-2">
             <span class="text-blue-500 font-bold">•</span>
-            <span>透明度スライダーでグラデーション効果も実現可能です</span>
+            <span>実際のスマートフォンで確認するとノッチの回避動作がわかります</span>
           </li>
         </ul>
       </div>
