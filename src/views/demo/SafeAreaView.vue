@@ -1,30 +1,39 @@
 <template>
-  <div class="min-h-screen bg-gray-50">
-    <!-- Safe Area Demo Section -->
+  <div class="bg-gray-50">
+    <!-- Safe Area Demo Section (Fullscreen) -->
     <div
       :style="{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
         backgroundColor: color,
         opacity: opacity / 100,
         paddingTop: 'max(20px, env(safe-area-inset-top))',
         paddingRight: 'max(20px, env(safe-area-inset-right))',
         paddingBottom: 'max(20px, env(safe-area-inset-bottom))',
         paddingLeft: 'max(20px, env(safe-area-inset-left))',
+        zIndex: 40,
       }"
-      class="transition-all duration-300"
+      class="transition-all duration-300 flex flex-col items-center justify-center"
     >
-      <div class="max-w-4xl mx-auto px-6 py-12">
-        <h1 class="text-4xl font-bold text-white mb-8">Safe Area Demo</h1>
-        <p class="text-lg text-white mb-4">
-          スマートフォンのセーフエリア（画面端の安全領域）のカラー変更デモです。
+      <div class="text-center">
+        <h1 class="text-4xl font-bold text-white mb-4">Safe Area Demo</h1>
+        <p class="text-lg text-white mb-2">
+          スマートフォンのセーフエリア
         </p>
         <p class="text-sm text-white opacity-90">
-          iPhone の ノッチやダイナミックアイランド、Android の丸角などを考慮した実装です。
+          iPhone のノッチ・Dynamic Island、Android の丸角を考慮
+        </p>
+        <p class="text-xs text-white opacity-75 mt-6">
+          下にスクロールして色を変更してください ↓
         </p>
       </div>
     </div>
 
     <!-- Control Panel -->
-    <div class="max-w-4xl mx-auto px-6 py-12">
+    <div class="max-w-4xl mx-auto px-6 py-12" style="margin-top: 100vh;">
       <div class="bg-white rounded-xl shadow-md p-8">
         <h2 class="text-2xl font-bold mb-6">カスタマイズ</h2>
 
