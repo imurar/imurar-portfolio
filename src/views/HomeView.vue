@@ -21,7 +21,7 @@
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition">
-          <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600"></div>
+          <img src="/images/android.jpg" alt="Android 開発" class="h-48 w-full object-cover">
           <div class="p-6">
             <h3 class="text-xl font-bold mb-2">Android 開発</h3>
             <p class="text-sm text-gray-600 mb-4">Kotlin を用いたネイティブ Android アプリケーション開発。実務での開発経験豊富。</p>
@@ -29,7 +29,7 @@
           </div>
         </div>
         <div class="bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition">
-          <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600"></div>
+          <img src="/images/mobile-order.jpg" alt="モバイルオーダー" class="h-48 w-full object-cover">
           <div class="p-6">
             <h3 class="text-xl font-bold mb-2">モバイルオーダー</h3>
             <p class="text-sm text-gray-600 mb-4">約120店舗展開中のシステム保守・改修。Node.js バージョンアップ、機能追加、AWS インフラ対応。</p>
@@ -37,7 +37,7 @@
           </div>
         </div>
         <div class="bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition">
-          <div class="h-48 bg-gradient-to-br from-orange-500 to-red-600"></div>
+          <img src="/images/pos.jpg" alt="POS レジ開発" class="h-48 w-full object-cover">
           <div class="p-6">
             <h3 class="text-xl font-bold mb-2">POS レジ開発</h3>
             <p class="text-sm text-gray-600 mb-4">POS レジシステムの開発。Windows/.NET での実装に対応。</p>
