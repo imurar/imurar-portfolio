@@ -77,7 +77,7 @@
             <span class="px-4 py-2 bg-gray-100 text-gray-700 text-sm rounded-full">Git</span>
           </div>
           <div class="mt-6">
-            <router-link to="/about" class="inline-flex items-center gap-2 text-slate-500 hover:text-slate-600 transition">
+            <router-link to="/profile" class="inline-flex items-center gap-2 text-slate-500 hover:text-slate-600 transition">
               詳しく見る
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
