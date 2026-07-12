@@ -108,6 +108,40 @@
           </li>
         </ul>
       </div>
+
+      <!-- Scroll Indicator -->
+      <div class="mt-8 bg-white rounded-xl shadow-md p-8 text-center border-2 border-blue-500">
+        <h2 class="text-3xl font-bold text-blue-600 mb-2">ここまでスクロールしてください ↓</h2>
+        <p class="text-gray-600">上のセーフエリアの表示がどのように変わるか確認してください</p>
+      </div>
+
+      <!-- Dummy Content -->
+      <div class="mt-8 space-y-6">
+        <div class="bg-white rounded-xl shadow-md p-8">
+          <h3 class="text-xl font-bold mb-4">セーフエリアについて</h3>
+          <p class="text-gray-700 mb-3">
+            スマートフォンのノッチやDynamic Island、ステータスバーのせいで、
+            コンテンツが隠れてしまうことがあります。セーフエリアは、そういった障害物を避けて
+            安全にコンテンツを配置できる領域です。
+          </p>
+          <p class="text-gray-700">
+            env() 関数を使うと、デバイスごとの違いを自動で吸収してくれるので、
+            一つのコードで複数デバイスに対応できます。
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-8">
+          <h3 class="text-xl font-bold mb-4">実装のコツ</h3>
+          <p class="text-gray-700 mb-3">
+            固定ヘッダーやナビゲーション、ボタンなど、画面の端に配置する要素には
+            特にセーフエリアの配慮が重要です。ノッチやDynamic Islandに隠れてしまうと、
+            ユーザーが操作できなくなってしまいます。
+          </p>
+          <p class="text-gray-700">
+            env() の対応ブラウザは十分に広いので、今からでも取り入れて損はありません。
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
