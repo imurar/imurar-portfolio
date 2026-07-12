@@ -3,21 +3,11 @@
     <h1 class="text-3xl font-bold mb-12">Profile</h1>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- 左側：趣味 -->
-      <div>
-        <!-- 趣味 -->
-        <div class="bg-gray-50 rounded-xl p-8">
-          <h2 class="text-2xl font-bold mb-6">趣味・興味</h2>
-          <div class="space-y-2">
-            <p class="text-gray-700">読書</p>
-            <p class="text-gray-700">スポーツ観戦</p>
-            <p class="text-gray-700">食べ歩き</p>
-          </div>
-        </div>
-      </div>
+      <!-- 左側：空 -->
+      <div class="md:order-2"></div>
 
       <!-- 右側：写真・基本情報・Links -->
-      <div>
+      <div class="md:order-1 mx-auto w-full md:w-auto">
         <!-- プロフィール写真 -->
         <div class="flex justify-center mb-8">
           <div class="w-48 h-48">
@@ -49,6 +39,16 @@
               <p class="text-gray-600 text-sm">MBTI</p>
               <p class="text-lg font-semibold">ENFJ-A</p>
             </div>
+          </div>
+        </div>
+
+        <!-- 趣味・興味 -->
+        <div class="bg-gray-50 rounded-xl p-8 mb-8">
+          <h2 class="text-2xl font-bold mb-6">趣味・興味</h2>
+          <div class="space-y-2">
+            <p class="text-gray-700">読書</p>
+            <p class="text-gray-700">スポーツ観戦</p>
+            <p class="text-gray-700">食べ歩き</p>
           </div>
         </div>
 
