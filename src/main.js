@@ -13,6 +13,7 @@ import UiView from './views/demo/UiView.vue'
 import AnimationView from './views/demo/AnimationView.vue'
 import CounterView from './views/demo/CounterView.vue'
 import TodoView from './views/demo/TodoView.vue'
+import SafeAreaView from './views/demo/SafeAreaView.vue'
 
 const router = createRouter({
   history: createWebHashHistory(),
@@ -27,6 +28,7 @@ const router = createRouter({
     { path: '/demo/animation', component: AnimationView },
     { path: '/demo/counter', component: CounterView },
     { path: '/demo/todo', component: TodoView },
+    { path: '/demo/safe-area', component: SafeAreaView },
   ],
   scrollBehavior() {
     return { top: 0 }

@@ -94,9 +94,9 @@ const projects = [
 ]
 
 const prevExperience = [
-  { title: 'Windows 11 移行に伴うシステム改修', company: '大手損保会社', period: '2025年6月 〜 2025年9月', tech: ['ClassicASP', 'JavaScript', 'VBScript', 'VBA', 'SQL Server'] },
+  { title: 'Windows 11 移行に伴うシステム改修', company: '大手損保会社', period: '2025年6月 〜 2025年9月', tech: ['HTML', 'CSS', 'ClassicASP', 'JavaScript', 'VBScript', 'VBA', 'SQL Server'] },
   { title: '不動産向け社内業務システム開発・保守', company: '不動産会社', period: '2024年6月 〜 2025年5月', tech: ['PHP', 'CakePHP', 'Oracle', 'PL/SQL', 'jQuery'] },
-  { title: '共済システム改修・テスト', company: '共済団体', period: '2023年12月 〜 2024年5月', tech: ['NEXACRO', 'SQL Server', 'Git'] },
+  { title: '共済システム改修・テスト', company: '共済団体', period: '2023年12月 〜 2024年5月', tech: ['HTML', 'CSS', 'NEXACRO', 'SQL Server', 'Git'] },
   { title: '社内業務効率化ツール開発・保守', company: '自動車メーカー', period: '2022年4月 〜 2023年7月', tech: ['VBA', 'Excel'] },
 ]
 </script>

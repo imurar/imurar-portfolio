@@ -20,5 +20,6 @@ const demos = [
   { to: '/demo/animation', icon: '✨', title: 'CSS アニメーション', description: 'フェードイン・スライド・ホバーエフェクト・ローディングのデモ' },
   { to: '/demo/counter', icon: '📝', title: '文字数カウンター', description: 'リアルタイムで文字数・行数・残り文字数を表示するツール' },
   { to: '/demo/todo', icon: '✅', title: 'ToDoリスト', description: 'タスクの追加・完了・削除・フィルタリングができるアプリ' },
+  { to: '/demo/safe-area', icon: '📱', title: 'セーフエリア対応', description: 'スマートフォンのセーフエリアのカラー・透明度をカスタマイズするデモ' },
 ]
 </script>
