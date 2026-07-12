@@ -16,7 +16,7 @@
   <section class="bg-gray-800 text-white py-20">
     <div class="max-w-6xl mx-auto px-6 w-full">
       <div class="mb-12">
-        <h2 class="text-5xl font-light mb-2">Selected <span class="text-slate-400">Works</span></h2>
+        <h2 class="text-5xl font-mono font-bold mb-2">Selected <span class="text-slate-400">Works</span></h2>
         <p class="text-gray-300">これまで制作・コーディングを担当したサイトの一部をご紹介します。</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -59,7 +59,7 @@
   <!-- About Me -->
   <section class="py-20">
     <div class="max-w-6xl mx-auto px-6 w-full">
-      <h2 class="text-5xl font-light mb-12">About <span class="text-slate-400">Me</span></h2>
+      <h2 class="text-5xl font-mono font-bold mb-12">About <span class="text-slate-400">Me</span></h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div class="flex justify-center">
           <img src="/images/profile.jpg" alt="プロフィール写真" class="w-64 h-64 rounded-full object-cover">
@@ -92,7 +92,7 @@
   <!-- サービスメニュー -->
   <section class="bg-gray-900 text-white py-20">
     <div class="max-w-4xl mx-auto px-6 w-full">
-      <h2 class="text-5xl font-light mb-2">Service <span class="text-slate-400">Menu</span></h2>
+      <h2 class="text-5xl font-mono font-bold mb-2">Service <span class="text-slate-400">Menu</span></h2>
       <p class="text-gray-300 mb-12">提供しているサービスをご紹介します。</p>
       <div class="space-y-8">
         <div class="border-b border-gray-700 pb-8">

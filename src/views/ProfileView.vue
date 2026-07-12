@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-4xl mx-auto px-6 py-12 w-full">
-    <h1 class="text-3xl font-bold mb-12">Profile</h1>
+    <h1 class="text-3xl font-mono font-bold mb-12">Profile</h1>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <!-- 左側：空 -->
@@ -17,7 +17,7 @@
 
         <!-- 基本情報 -->
         <div class="bg-gray-50 rounded-xl p-8 mb-8">
-          <h2 class="text-2xl font-bold mb-6">基本情報</h2>
+          <h2 class="text-2xl font-mono font-bold mb-6">基本情報</h2>
           <div class="space-y-4">
             <div>
               <p class="text-gray-600 text-sm">名前</p>
@@ -44,7 +44,7 @@
 
         <!-- 趣味・興味 -->
         <div class="bg-gray-50 rounded-xl p-8 mb-8">
-          <h2 class="text-2xl font-bold mb-6">趣味・興味</h2>
+          <h2 class="text-2xl font-mono font-bold mb-6">趣味・興味</h2>
           <div class="space-y-2">
             <p class="text-gray-700">読書</p>
             <p class="text-gray-700">スポーツ観戦</p>
