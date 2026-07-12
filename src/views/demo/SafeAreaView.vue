@@ -12,8 +12,26 @@
       paddingLeft: 'max(20px, env(safe-area-inset-left))',
       zIndex: 10,
     }"
-    class="w-full transition-all duration-300 flex flex-col items-center justify-center"
+    class="w-full transition-all duration-300 flex flex-col items-center justify-center relative"
   >
+      <!-- Notch area text overlay -->
+      <div
+        :style="{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          height: 'max(44px, env(safe-area-inset-top))',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 20,
+          overflow: 'hidden',
+        }"
+      >
+        <p class="text-white text-xs font-semibold">ノッチテスト</p>
+      </div>
+
       <div class="text-center text-white">
         <p class="text-sm opacity-75">スマートフォンのセーフエリア</p>
         <p class="text-xs opacity-60 mt-1">下にスクロールして色を変更してください ↓</p>
