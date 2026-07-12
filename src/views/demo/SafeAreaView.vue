@@ -5,8 +5,7 @@
       position: 'sticky',
       top: 0,
       minHeight: '200px',
-      backgroundColor: color,
-      opacity: opacity / 100,
+      backgroundColor: getRgba(color, opacity),
       paddingTop: 'max(20px, env(safe-area-inset-top))',
       paddingRight: 'max(20px, env(safe-area-inset-right))',
       paddingBottom: 'max(20px, env(safe-area-inset-bottom))',
@@ -141,5 +140,12 @@ const selectPreset = (preset) => {
 
 const getSafeAreaCSS = () => {
   return 'max(20px, env(safe-area-inset-top))'
+}
+
+const getRgba = (hex, opacityPercent) => {
+  const r = parseInt(hex.slice(1, 3), 16)
+  const g = parseInt(hex.slice(3, 5), 16)
+  const b = parseInt(hex.slice(5, 7), 16)
+  return `rgba(${r}, ${g}, ${b}, ${opacityPercent / 100})`
 }
 </script>
