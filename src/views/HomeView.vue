@@ -99,7 +99,7 @@
           <div class="flex gap-6">
             <span class="text-slate-400 text-3xl font-light">01</span>
             <div>
-              <h3 class="text-2xl font-light mb-3">Frontend Development</h3>
+              <h3 class="text-2xl font-light mb-3">フロントエンド開発</h3>
               <p class="text-gray-400">HTML / CSS / JavaScript / Vue.js を用いたフロントエンド開発。デザインデータから実装まで対応します。</p>
             </div>
           </div>
@@ -108,8 +108,8 @@
           <div class="flex gap-6">
             <span class="text-slate-400 text-3xl font-light">02</span>
             <div>
-              <h3 class="text-2xl font-light mb-3">Backend Development</h3>
-              <p class="text-gray-400">Node.js / Express / MongoDB を中心とした、スケーラブルなバックエンド開発。AWS での本番運用も対応。</p>
+              <h3 class="text-2xl font-light mb-3">バックエンド開発</h3>
+              <p class="text-gray-400">Node.js / PHP / Python など、幅広い言語によるバックエンド開発。AWS インフラにも対応。</p>
             </div>
           </div>
         </div>
@@ -117,7 +117,7 @@
           <div class="flex gap-6">
             <span class="text-slate-400 text-3xl font-light">03</span>
             <div>
-              <h3 class="text-2xl font-light mb-3">Mobile App Development</h3>
+              <h3 class="text-2xl font-light mb-3">モバイル開発</h3>
               <p class="text-gray-400">Kotlin / Android による、スマートフォンアプリケーション開発。バックエンド と の統合対応も可能。</p>
             </div>
           </div>
