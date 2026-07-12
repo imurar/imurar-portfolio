@@ -12,101 +12,132 @@
     </div>
   </section>
 
-  <!-- コンテンツ -->
-  <div class="max-w-4xl mx-auto px-6 py-12 w-full">
-    <!-- スキル -->
-    <section class="mb-16 mt-4">
-      <h2 class="text-2xl font-bold mb-6 pb-2 border-b-2 border-gray-200">Skills</h2>
+  <!-- 実績 / Selected Works -->
+  <section class="bg-gray-800 text-white py-20">
+    <div class="max-w-6xl mx-auto px-6 w-full">
+      <div class="mb-12">
+        <h2 class="text-5xl font-light mb-2">Selected <span class="text-slate-400">Works</span></h2>
+        <p class="text-gray-300">これまで制作・コーディングを担当したサイトの一部をご紹介します。</p>
+      </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div>
-          <h3 class="text-sm font-bold uppercase tracking-widest text-gray-500 mb-3">Backend</h3>
-          <div class="flex flex-wrap gap-2">
-            <span v-for="s in ['Node.js', 'Express', 'PHP', 'Laravel', 'CakePHP', 'VB.NET']" :key="s"
-              class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">{{ s }}</span>
+        <div class="bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition">
+          <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Android 券売機システム</h3>
+            <p class="text-sm text-gray-600 mb-4">飲食店向けセルフオーダー券売機をフルスタック開発。Kotlin Android アプリから Node.js 基盤まで。</p>
+            <div class="text-xs text-gray-500">Role　Design / Coding</div>
           </div>
         </div>
-        <div>
-          <h3 class="text-sm font-bold uppercase tracking-widest text-gray-500 mb-3">Frontend / Mobile</h3>
-          <div class="flex flex-wrap gap-2">
-            <span v-for="s in ['Kotlin', 'Android', 'JavaScript', 'HTML', 'CSS', 'Tailwind CSS', 'Vue.js']" :key="s"
-              class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">{{ s }}</span>
+        <div class="bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition">
+          <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">モバイルオーダーシステム</h3>
+            <p class="text-sm text-gray-600 mb-4">約120店舗展開中のシステムで Node.js v12 → v24 へのバージョンアップと機能改修を担当。</p>
+            <div class="text-xs text-gray-500">Role　Design / Coding</div>
           </div>
         </div>
-        <div>
-          <h3 class="text-sm font-bold uppercase tracking-widest text-gray-500 mb-3">Infra / Tools</h3>
-          <div class="flex flex-wrap gap-2">
-            <span v-for="s in ['AWS', 'Docker', 'Git', 'CI/CD', 'MongoDB', 'MySQL']" :key="s"
-              class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">{{ s }}</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- プロジェクト -->
-    <section class="mb-16">
-      <h2 class="text-2xl font-bold mb-6 pb-2 border-b-2 border-gray-200">Projects</h2>
-      <div class="space-y-4">
-        <div class="border border-gray-200 rounded-xl p-6 hover:shadow-md transition">
-          <div class="flex justify-between items-start gap-2 mb-2">
-            <h3 class="font-bold">Android 券売機システム（新規開発）</h3>
-            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full shrink-0">新規開発</span>
-          </div>
-          <p class="text-sm text-gray-600 mb-3">飲食店向けセルフオーダー券売機をフルスタックで開発。Kotlin Android アプリから Node.js CMS・AWS インフラまで一気通貫。</p>
-          <div class="flex flex-wrap gap-1">
-            <span v-for="t in ['Kotlin', 'Node.js', 'MongoDB', 'AWS', 'Docker']" :key="t"
-              class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded">{{ t }}</span>
-          </div>
-        </div>
-        <div class="border border-gray-200 rounded-xl p-6 hover:shadow-md transition">
-          <div class="flex justify-between items-start gap-2 mb-2">
-            <h3 class="font-bold">モバイルオーダーシステム（保守・改修）</h3>
-            <span class="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded-full shrink-0">保守・改修</span>
-          </div>
-          <p class="text-sm text-gray-600 mb-3">約 120 店舗展開中のシステムで Node.js v12 → v24 へのメジャーバージョンアップと機能改修を担当。</p>
-          <div class="flex flex-wrap gap-1">
-            <span v-for="t in ['Node.js', 'Socket.IO', 'MongoDB', 'AWS DocumentDB']" :key="t"
-              class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded">{{ t }}</span>
+        <div class="bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition">
+          <div class="h-48 bg-gradient-to-br from-orange-500 to-red-600"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">ポートフォリオサイト</h3>
+            <p class="text-sm text-gray-600 mb-4">自身のポートフォリオサイトを Vue.js でデザイン・コーディング。レスポンシブ対応。</p>
+            <div class="text-xs text-gray-500">Role　Design / Coding</div>
           </div>
         </div>
       </div>
-      <div class="mt-4">
-        <router-link to="/projects" class="text-sm text-gray-500 hover:text-gray-800 transition underline underline-offset-4">
-          すべてのプロジェクトを見る →
+      <div class="mt-8 text-center">
+        <router-link to="/projects" class="text-slate-400 hover:text-slate-300 transition inline-flex items-center gap-2">
+          すべてのプロジェクトを見る
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
         </router-link>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- リンク -->
-    <section class="mb-8">
-      <h2 class="text-2xl font-bold mb-6 pb-2 border-b-2 border-gray-200">Links</h2>
-      <div class="space-y-3 max-w-xs">
-        <a href="https://github.com/imurar" target="_blank"
-          class="flex items-center gap-3 bg-gray-800 hover:bg-gray-900 text-white px-4 py-3 rounded-lg transition">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.603-3.369-1.343-3.369-1.343-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.545 2.914 1.209.092-.937.35-1.546.636-1.903-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0110 4.817c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.138 18.192 20 14.435 20 10.017 20 4.484 15.522 0 10 0z" clip-rule="evenodd" />
-          </svg>
-          GitHub
-        </a>
-        <a href="https://qiita.com/imurar" target="_blank"
-          class="flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-lg transition">
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="11" fill="currentColor"/>
-            <path d="M8 10C8 8.9 7.1 8 6 8C4.9 8 4 8.9 4 10C4 11.1 4.9 12 6 12C7.1 12 8 11.1 8 10Z" fill="white"/>
-            <path d="M16 10C16 8.9 15.1 8 14 8C12.9 8 12 8.9 12 10C12 11.1 12.9 12 14 12C15.1 12 16 11.1 16 10Z" fill="white"/>
-            <path d="M10 16C10 15.4 10.4 15 11 15H13C13.6 15 14 15.4 14 16C14 16.6 13.6 17 13 17H11C10.4 17 10 16.6 10 16Z" fill="white"/>
-          </svg>
-          Qiita
-        </a>
-        <a href="https://github.com/imurar/imurar.github.io" target="_blank"
-          class="flex items-center gap-3 bg-purple-500 hover:bg-purple-600 text-white px-4 py-3 rounded-lg transition">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.603-3.369-1.343-3.369-1.343-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.545 2.914 1.209.092-.937.35-1.546.636-1.903-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0110 4.817c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.138 18.192 20 14.435 20 10.017 20 4.484 15.522 0 10 0z" clip-rule="evenodd" />
-          </svg>
-          このHPのソースコード
-        </a>
+  <!-- About Me -->
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-6 w-full">
+      <h2 class="text-5xl font-light mb-12">About <span class="text-slate-400">Me</span></h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="flex justify-center">
+          <img src="/images/profile.jpg" alt="プロフィール写真" class="w-64 h-64 rounded-full object-cover">
+        </div>
+        <div>
+          <p class="text-gray-700 mb-4 leading-relaxed">確実な技術と丁寧なコミュニケーションで、クライアント様のプロジェクトをサポートしています。</p>
+          <p class="text-gray-700 mb-4 leading-relaxed">HTML / CSS / JavaScript を用いたホームページ制作から、Node.js によるバックエンド開発、Kotlin Android アプリ開発、AWS インフラ構築まで、フルスタックで対応可能です。</p>
+          <p class="text-gray-700 mb-6 leading-relaxed">品質の高いコードで、長期的な運用をサポートします。</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-4 py-2 bg-gray-100 text-gray-700 text-sm rounded-full">Node.js</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-700 text-sm rounded-full">Kotlin</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-700 text-sm rounded-full">AWS</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-700 text-sm rounded-full">Vue.js</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-700 text-sm rounded-full">Docker</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-700 text-sm rounded-full">Git</span>
+          </div>
+          <div class="mt-6">
+            <router-link to="/about" class="inline-flex items-center gap-2 text-slate-500 hover:text-slate-600 transition">
+              詳しく見る
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </router-link>
+          </div>
+        </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
+
+  <!-- サービスメニュー -->
+  <section class="bg-gray-900 text-white py-20">
+    <div class="max-w-4xl mx-auto px-6 w-full">
+      <h2 class="text-5xl font-light mb-2">Service <span class="text-slate-400">Menu</span></h2>
+      <p class="text-gray-300 mb-12">提供しているサービスをご紹介します。</p>
+      <div class="space-y-8">
+        <div class="border-b border-gray-700 pb-8">
+          <div class="flex gap-6">
+            <span class="text-slate-400 text-3xl font-light">01</span>
+            <div>
+              <h3 class="text-2xl font-light mb-3">Frontend Development</h3>
+              <p class="text-gray-400">HTML / CSS / JavaScript / Vue.js を用いたフロントエンド開発。デザインデータから実装まで対応します。</p>
+            </div>
+          </div>
+        </div>
+        <div class="border-b border-gray-700 pb-8">
+          <div class="flex gap-6">
+            <span class="text-slate-400 text-3xl font-light">02</span>
+            <div>
+              <h3 class="text-2xl font-light mb-3">Backend Development</h3>
+              <p class="text-gray-400">Node.js / Express / MongoDB を中心とした、スケーラブルなバックエンド開発。AWS での本番運用も対応。</p>
+            </div>
+          </div>
+        </div>
+        <div class="pb-8">
+          <div class="flex gap-6">
+            <span class="text-slate-400 text-3xl font-light">03</span>
+            <div>
+              <h3 class="text-2xl font-light mb-3">Mobile App Development</h3>
+              <p class="text-gray-400">Kotlin / Android による、スマートフォンアプリケーション開発。バックエンド と の統合対応も可能。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- コンタクト -->
+  <section class="py-20 bg-gray-100">
+    <div class="max-w-2xl mx-auto px-6 w-full">
+      <div class="bg-white rounded-lg p-12 text-center">
+        <p class="text-gray-700 mb-4 leading-relaxed">案件のご相談やお気軽にお問い合わせください。</p>
+        <p class="text-gray-700 mb-8 leading-relaxed">ホームページ制作から Web 開発まで、確実な技術でプロジェクトをサポートします。</p>
+        <router-link to="/contact" class="inline-block bg-slate-700 hover:bg-slate-800 text-white font-semibold px-8 py-3 rounded transition">
+          お問い合わせ
+        </router-link>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script setup>
