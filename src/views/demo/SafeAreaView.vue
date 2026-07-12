@@ -5,12 +5,13 @@
       position: 'sticky',
       top: 0,
       minHeight: '200px',
-      backgroundColor: getRgba(color, opacity),
+      backgroundColor: getRgba(color, Math.min(opacity + 20, 100)),
       paddingTop: 'max(20px, env(safe-area-inset-top))',
       paddingRight: 'max(20px, env(safe-area-inset-right))',
       paddingBottom: 'max(20px, env(safe-area-inset-bottom))',
       paddingLeft: 'max(20px, env(safe-area-inset-left))',
       zIndex: 10,
+      WebkitBackdropFilter: 'blur(8px)',
     }"
     class="w-full transition-all duration-300 flex flex-col items-center justify-center relative"
   >
