@@ -131,6 +131,8 @@ const presets = [
   { name: 'Blue', color: '#3498db' },
   { name: 'Green', color: '#27ae60' },
   { name: 'Purple', color: '#9b59b6' },
+  { name: 'Red', color: '#e74c3c' },
+  { name: 'Orange', color: '#e67e22' },
 ]
 
 const selectPreset = (preset) => {
