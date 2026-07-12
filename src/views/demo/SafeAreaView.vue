@@ -15,8 +15,9 @@
     }"
     class="w-full transition-all duration-300 flex flex-col items-center justify-center"
   >
-      <div class="text-center text-white opacity-75">
-        <p class="text-sm">セーフエリア</p>
+      <div class="text-center text-white">
+        <p class="text-sm opacity-75">スマートフォンのセーフエリア</p>
+        <p class="text-xs opacity-60 mt-1">下にスクロールして色を変更してください ↓</p>
       </div>
   </div>
 
