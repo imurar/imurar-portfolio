@@ -1,28 +1,22 @@
 <template>
-  <!-- Safe Area Demo Section -->
+  <!-- Safe Area Display (Sticky - Fixed at top) -->
   <div
     :style="{
-      minHeight: '100vh',
+      position: 'sticky',
+      top: 0,
+      minHeight: '200px',
       backgroundColor: color,
       opacity: opacity / 100,
       paddingTop: 'max(20px, env(safe-area-inset-top))',
       paddingRight: 'max(20px, env(safe-area-inset-right))',
       paddingBottom: 'max(20px, env(safe-area-inset-bottom))',
       paddingLeft: 'max(20px, env(safe-area-inset-left))',
+      zIndex: 10,
     }"
     class="w-full transition-all duration-300 flex flex-col items-center justify-center"
   >
-      <div class="text-center">
-        <h1 class="text-4xl font-bold text-white mb-4">Safe Area Demo</h1>
-        <p class="text-lg text-white mb-2">
-          スマートフォンのセーフエリア
-        </p>
-        <p class="text-sm text-white opacity-90">
-          iPhone のノッチ・Dynamic Island、Android の丸角を考慮
-        </p>
-        <p class="text-xs text-white opacity-75 mt-6">
-          下にスクロールして色を変更してください ↓
-        </p>
+      <div class="text-center text-white opacity-75">
+        <p class="text-sm">セーフエリア</p>
       </div>
   </div>
 
