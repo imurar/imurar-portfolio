@@ -23,25 +23,25 @@
         <div class="bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition">
           <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600"></div>
           <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Android 券売機システム</h3>
-            <p class="text-sm text-gray-600 mb-4">飲食店向けセルフオーダー券売機をフルスタック開発。Kotlin Android アプリから Node.js 基盤まで。</p>
-            <div class="text-xs text-gray-500">Role　Design / Coding</div>
+            <h3 class="text-xl font-bold mb-2">Android 開発</h3>
+            <p class="text-sm text-gray-600 mb-4">Kotlin を用いたネイティブ Android アプリケーション開発。実務での開発経験豊富。</p>
+            <div class="text-xs text-gray-500">Role　Development</div>
           </div>
         </div>
         <div class="bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition">
           <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600"></div>
           <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">モバイルオーダーシステム</h3>
-            <p class="text-sm text-gray-600 mb-4">約120店舗展開中のシステムで Node.js v12 → v24 へのバージョンアップと機能改修を担当。</p>
-            <div class="text-xs text-gray-500">Role　Design / Coding</div>
+            <h3 class="text-xl font-bold mb-2">モバイルオーダー</h3>
+            <p class="text-sm text-gray-600 mb-4">約120店舗展開中のシステム保守・改修。Node.js バージョンアップ、機能追加、AWS インフラ対応。</p>
+            <div class="text-xs text-gray-500">Role　Backend / Infra</div>
           </div>
         </div>
         <div class="bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition">
           <div class="h-48 bg-gradient-to-br from-orange-500 to-red-600"></div>
           <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">ポートフォリオサイト</h3>
-            <p class="text-sm text-gray-600 mb-4">自身のポートフォリオサイトを Vue.js でデザイン・コーディング。レスポンシブ対応。</p>
-            <div class="text-xs text-gray-500">Role　Design / Coding</div>
+            <h3 class="text-xl font-bold mb-2">POS レジ開発</h3>
+            <p class="text-sm text-gray-600 mb-4">POS レジシステムの開発。Windows/.NET での実装に対応。</p>
+            <div class="text-xs text-gray-500">Role　Development</div>
           </div>
         </div>
       </div>
