@@ -79,27 +79,41 @@
     <!-- リンク -->
     <section class="mb-8">
       <h2 class="text-2xl font-bold mb-6 pb-2 border-b-2 border-gray-200">Links</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <!-- Profile -->
-        <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
-          <h3 class="text-sm font-semibold text-gray-600 mb-2">Profile</h3>
+        <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition flex flex-col">
+          <h3 class="text-sm font-semibold text-gray-600 mb-3">Profile</h3>
           <a href="https://github.com/imurar" target="_blank"
-            class="inline-flex items-center gap-2 text-gray-700 hover:text-gray-900 transition">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            class="inline-flex items-center gap-2 text-gray-700 hover:text-gray-900 transition text-sm truncate">
+            <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
             </svg>
-            github.com/imurar
+            <span class="truncate">github.com/imurar</span>
           </a>
         </div>
         <!-- Source Code -->
-        <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
-          <h3 class="text-sm font-semibold text-gray-600 mb-2">このHPのソースコード</h3>
+        <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition flex flex-col">
+          <h3 class="text-sm font-semibold text-gray-600 mb-3">このHPのソースコード</h3>
           <a href="https://github.com/imurar/imurar.github.io" target="_blank"
-            class="inline-flex items-center gap-2 text-gray-700 hover:text-gray-900 transition">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            class="inline-flex items-center gap-2 text-gray-700 hover:text-gray-900 transition text-sm truncate">
+            <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
             </svg>
-            github.com/imurar/imurar.github.io
+            <span class="truncate">github.com/imurar/imurar.github.io</span>
+          </a>
+        </div>
+        <!-- Qiita -->
+        <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition flex flex-col">
+          <h3 class="text-sm font-semibold text-gray-600 mb-3">Qiita</h3>
+          <a href="https://qiita.com/imurar" target="_blank"
+            class="inline-flex items-center gap-2 text-gray-700 hover:text-gray-900 transition text-sm truncate">
+            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="11" fill="#55C500"/>
+              <path d="M8 10C8 8.9 7.1 8 6 8C4.9 8 4 8.9 4 10C4 11.1 4.9 12 6 12C7.1 12 8 11.1 8 10Z" fill="white"/>
+              <path d="M16 10C16 8.9 15.1 8 14 8C12.9 8 12 8.9 12 10C12 11.1 12.9 12 14 12C15.1 12 16 11.1 16 10Z" fill="white"/>
+              <path d="M10 16C10 15.4 10.4 15 11 15H13C13.6 15 14 15.4 14 16C14 16.6 13.6 17 13 17H11C10.4 17 10 16.6 10 16Z" fill="white"/>
+            </svg>
+            <span class="truncate">qiita.com/imurar</span>
           </a>
         </div>
       </div>
