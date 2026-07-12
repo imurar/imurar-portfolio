@@ -1,23 +1,17 @@
 <template>
-  <div class="bg-gray-50">
-    <!-- Safe Area Demo Section (Fullscreen) -->
-    <div
-      :style="{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        backgroundColor: color,
-        opacity: opacity / 100,
-        paddingTop: 'max(20px, env(safe-area-inset-top))',
-        paddingRight: 'max(20px, env(safe-area-inset-right))',
-        paddingBottom: 'max(20px, env(safe-area-inset-bottom))',
-        paddingLeft: 'max(20px, env(safe-area-inset-left))',
-        zIndex: 40,
-      }"
-      class="transition-all duration-300 flex flex-col items-center justify-center"
-    >
+  <!-- Safe Area Demo Section -->
+  <div
+    :style="{
+      minHeight: '100vh',
+      backgroundColor: color,
+      opacity: opacity / 100,
+      paddingTop: 'max(20px, env(safe-area-inset-top))',
+      paddingRight: 'max(20px, env(safe-area-inset-right))',
+      paddingBottom: 'max(20px, env(safe-area-inset-bottom))',
+      paddingLeft: 'max(20px, env(safe-area-inset-left))',
+    }"
+    class="w-full transition-all duration-300 flex flex-col items-center justify-center"
+  >
       <div class="text-center">
         <h1 class="text-4xl font-bold text-white mb-4">Safe Area Demo</h1>
         <p class="text-lg text-white mb-2">
@@ -30,10 +24,11 @@
           下にスクロールして色を変更してください ↓
         </p>
       </div>
-    </div>
+  </div>
 
-    <!-- Control Panel -->
-    <div class="max-w-4xl mx-auto px-6 py-12" style="margin-top: 100vh;">
+  <!-- Control Panel -->
+  <div class="bg-gray-50 w-full">
+    <div class="max-w-4xl mx-auto px-6 py-12">
       <div class="bg-white rounded-xl shadow-md p-8">
         <h2 class="text-2xl font-bold mb-6">カスタマイズ</h2>
 
@@ -72,12 +67,12 @@
         <!-- Preset Colors -->
         <div class="mb-8">
           <label class="block text-sm font-semibold text-gray-700 mb-3">プリセット色</label>
-          <div class="flex gap-3">
+          <div class="flex flex-wrap gap-3">
             <button
               v-for="preset in presets"
               :key="preset.name"
               @click="selectPreset(preset)"
-              class="px-4 py-3 rounded-lg font-semibold text-white transition-transform hover:scale-105 active:scale-95"
+              class="px-4 py-3 rounded-lg font-semibold text-white transition-transform hover:scale-105 active:scale-95 flex-1 min-w-max"
               :style="{ backgroundColor: preset.color }"
             >
               {{ preset.name }}
