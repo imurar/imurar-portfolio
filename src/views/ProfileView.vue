@@ -2,36 +2,9 @@
   <div class="max-w-4xl mx-auto px-6 py-12 w-full">
     <h1 class="text-3xl font-bold mb-12">Profile</h1>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- プロフィール情報 -->
-      <div class="md:col-span-2">
-        <!-- 基本情報 -->
-        <div class="bg-gray-50 rounded-xl p-8 mb-8">
-          <h2 class="text-2xl font-bold mb-6">基本情報</h2>
-          <div class="space-y-4">
-            <div>
-              <p class="text-gray-600 text-sm">名前</p>
-              <p class="text-lg font-semibold">井村りゅうき</p>
-            </div>
-            <div>
-              <p class="text-gray-600 text-sm">年齢</p>
-              <p class="text-lg font-semibold">26歳</p>
-            </div>
-            <div>
-              <p class="text-gray-600 text-sm">居住地</p>
-              <p class="text-lg font-semibold">神奈川県横浜市</p>
-            </div>
-            <div>
-              <p class="text-gray-600 text-sm">職業</p>
-              <p class="text-lg font-semibold">Web・Androidエンジニア</p>
-            </div>
-            <div>
-              <p class="text-gray-600 text-sm">MBTI</p>
-              <p class="text-lg font-semibold">ENFJ-A</p>
-            </div>
-          </div>
-        </div>
-
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- 左側：経歴・趣味 -->
+      <div>
         <!-- 経歴概要 -->
         <div class="bg-gray-50 rounded-xl p-8 mb-8">
           <h2 class="text-2xl font-bold mb-6">経歴</h2>
@@ -61,10 +34,44 @@
         </div>
       </div>
 
-      <!-- サイドバー -->
-      <div class="md:col-span-1">
-        <!-- GitHub リンク -->
-        <div class="bg-gray-50 rounded-xl p-6 sticky top-20">
+      <!-- 右側：写真・基本情報・Links -->
+      <div>
+        <!-- プロフィール写真 -->
+        <div class="flex justify-center mb-8">
+          <div class="w-48 h-48">
+            <img src="/images/profile.jpg" alt="プロフィール写真" class="w-full h-full object-cover rounded-full">
+          </div>
+        </div>
+
+        <!-- 基本情報 -->
+        <div class="bg-gray-50 rounded-xl p-8 mb-8">
+          <h2 class="text-2xl font-bold mb-6">基本情報</h2>
+          <div class="space-y-4">
+            <div>
+              <p class="text-gray-600 text-sm">名前</p>
+              <p class="text-lg font-semibold">井村りゅうき</p>
+            </div>
+            <div>
+              <p class="text-gray-600 text-sm">年齢</p>
+              <p class="text-lg font-semibold">26歳</p>
+            </div>
+            <div>
+              <p class="text-gray-600 text-sm">居住地</p>
+              <p class="text-lg font-semibold">神奈川県横浜市</p>
+            </div>
+            <div>
+              <p class="text-gray-600 text-sm">職業</p>
+              <p class="text-lg font-semibold">Web・Androidエンジニア</p>
+            </div>
+            <div>
+              <p class="text-gray-600 text-sm">MBTI</p>
+              <p class="text-lg font-semibold">ENFJ-A</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div class="bg-gray-50 rounded-xl p-6">
           <h3 class="font-bold text-lg mb-4">Links</h3>
           <a href="https://github.com/imurar" target="_blank" rel="noopener noreferrer"
             class="flex items-center gap-3 bg-gray-800 hover:bg-gray-900 text-white px-4 py-3 rounded-lg transition mb-3">
