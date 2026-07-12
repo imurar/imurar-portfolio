@@ -79,43 +79,31 @@
     <!-- リンク -->
     <section class="mb-8">
       <h2 class="text-2xl font-bold mb-6 pb-2 border-b-2 border-gray-200">Links</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <!-- Profile -->
-        <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition flex flex-col">
-          <h3 class="text-sm font-semibold text-gray-600 mb-3">Profile</h3>
-          <a href="https://github.com/imurar" target="_blank"
-            class="inline-flex items-center gap-2 text-gray-700 hover:text-gray-900 transition text-sm truncate">
-            <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
-            </svg>
-            <span class="truncate">github.com/imurar</span>
-          </a>
-        </div>
-        <!-- Source Code -->
-        <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition flex flex-col">
-          <h3 class="text-sm font-semibold text-gray-600 mb-3">このHPのソースコード</h3>
-          <a href="https://github.com/imurar/imurar.github.io" target="_blank"
-            class="inline-flex items-center gap-2 text-gray-700 hover:text-gray-900 transition text-sm truncate">
-            <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
-            </svg>
-            <span class="truncate">github.com/imurar/imurar.github.io</span>
-          </a>
-        </div>
-        <!-- Qiita -->
-        <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition flex flex-col">
-          <h3 class="text-sm font-semibold text-gray-600 mb-3">Qiita</h3>
-          <a href="https://qiita.com/imurar" target="_blank"
-            class="inline-flex items-center gap-2 text-gray-700 hover:text-gray-900 transition text-sm truncate">
-            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="11" fill="#55C500"/>
-              <path d="M8 10C8 8.9 7.1 8 6 8C4.9 8 4 8.9 4 10C4 11.1 4.9 12 6 12C7.1 12 8 11.1 8 10Z" fill="white"/>
-              <path d="M16 10C16 8.9 15.1 8 14 8C12.9 8 12 8.9 12 10C12 11.1 12.9 12 14 12C15.1 12 16 11.1 16 10Z" fill="white"/>
-              <path d="M10 16C10 15.4 10.4 15 11 15H13C13.6 15 14 15.4 14 16C14 16.6 13.6 17 13 17H11C10.4 17 10 16.6 10 16Z" fill="white"/>
-            </svg>
-            <span class="truncate">qiita.com/imurar</span>
-          </a>
-        </div>
+      <div class="space-y-3 max-w-xs">
+        <a href="https://github.com/imurar" target="_blank"
+          class="flex items-center gap-3 bg-gray-800 hover:bg-gray-900 text-white px-4 py-3 rounded-lg transition">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.603-3.369-1.343-3.369-1.343-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.545 2.914 1.209.092-.937.35-1.546.636-1.903-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0110 4.817c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.138 18.192 20 14.435 20 10.017 20 4.484 15.522 0 10 0z" clip-rule="evenodd" />
+          </svg>
+          GitHub
+        </a>
+        <a href="https://qiita.com/imurar" target="_blank"
+          class="flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-lg transition">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="11" fill="currentColor"/>
+            <path d="M8 10C8 8.9 7.1 8 6 8C4.9 8 4 8.9 4 10C4 11.1 4.9 12 6 12C7.1 12 8 11.1 8 10Z" fill="white"/>
+            <path d="M16 10C16 8.9 15.1 8 14 8C12.9 8 12 8.9 12 10C12 11.1 12.9 12 14 12C15.1 12 16 11.1 16 10Z" fill="white"/>
+            <path d="M10 16C10 15.4 10.4 15 11 15H13C13.6 15 14 15.4 14 16C14 16.6 13.6 17 13 17H11C10.4 17 10 16.6 10 16Z" fill="white"/>
+          </svg>
+          Qiita
+        </a>
+        <a href="https://github.com/imurar/imurar.github.io" target="_blank"
+          class="flex items-center gap-3 bg-purple-500 hover:bg-purple-600 text-white px-4 py-3 rounded-lg transition">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.603-3.369-1.343-3.369-1.343-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.545 2.914 1.209.092-.937.35-1.546.636-1.903-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0110 4.817c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.138 18.192 20 14.435 20 10.017 20 4.484 15.522 0 10 0z" clip-rule="evenodd" />
+          </svg>
+          このHPのソースコード
+        </a>
       </div>
     </section>
   </div>
