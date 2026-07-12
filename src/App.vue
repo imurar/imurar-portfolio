@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col min-h-screen bg-white text-gray-900">
     <!-- ナビゲーション -->
-    <header class="bg-gray-900 text-white shadow sticky top-0 z-50">
+    <header v-if="$route.path !== '/demo/safe-area'" class="bg-gray-900 text-white shadow sticky top-0 z-50">
       <nav class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
         <router-link to="/" class="text-xl font-bold hover:text-gray-300 transition font-mono tracking-tight whitespace-nowrap">&lt; imurar /&gt;</router-link>
 
@@ -39,7 +39,7 @@
     <router-view />
 
     <!-- フッター -->
-    <footer class="bg-gray-900 text-white text-center py-6 mt-12">
+    <footer v-if="$route.path !== '/demo/safe-area'" class="bg-gray-900 text-white text-center py-6 mt-12">
       <p>&copy; 2026 imurar. All rights reserved.</p>
     </footer>
   </div>
