@@ -50,7 +50,10 @@
             min="0"
             max="100"
             step="5"
-            class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+            class="w-full h-2 rounded-lg appearance-none cursor-pointer"
+            :style="{
+              background: `linear-gradient(to right, ${getRgba(color, opacity)}, ${getRgba(color, 0)})`
+            }"
           >
           <div class="flex justify-between text-xs text-gray-500 mt-2">
             <span>0% (透明)</span>
@@ -135,7 +138,6 @@ const presets = [
 
 const selectPreset = (preset) => {
   color.value = preset.color
-  opacity.value = 100
 }
 
 const getSafeAreaCSS = () => {
