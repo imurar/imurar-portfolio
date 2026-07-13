@@ -1,25 +1,20 @@
 # imurar ポートフォリオサイト
 
-Vue 3 + Vite + Tailwind CSS で構築したポートフォリオサイトです。
+Astro + Tailwind CSS で構築した静的生成ポートフォリオサイトです。
 
 ## プロジェクト構成
 
 ```
 src/
-├── App.vue          # ルートコンポーネント（ナビ・フッター）
-├── main.js          # エントリポイント・ルーター設定
-├── assets/          # グローバルCSS
-└── views/           # ページコンポーネント
-    ├── HomeView.vue
-    ├── ProjectsView.vue
-    ├── ContactView.vue
-    ├── ContactThanksView.vue
-    └── demo/
-        ├── DemoView.vue
-        ├── UiView.vue
-        ├── AnimationView.vue
-        ├── CounterView.vue
-        └── TodoView.vue
+├── layouts/          # 共有レイアウト
+│   └── BaseLayout.astro
+├── pages/            # ファイルベースルーティング
+│   ├── index.astro              # ホームページ
+│   ├── about.astro
+│   ├── projects.astro
+│   ├── contact.astro
+│   └── contact-thanks.astro
+└── styles/           # グローバルスタイル
 ```
 
 ## セットアップ
@@ -44,10 +39,9 @@ npm run build
 
 ## 使用技術
 
-- **Vue 3** - フロントエンドフレームワーク
-- **Vue Router** - クライアントサイドルーティング（Hash モード）
-- **Vite** - ビルドツール
+- **Astro** - 静的サイトジェネレータ（SSG）
 - **Tailwind CSS v4** - ユーティリティ CSS フレームワーク
+- **vanilla JavaScript** - インタラクティブ機能（ハンバーガーメニュー、ヒーロー画像アニメーション）
 
 ## デプロイ
 
