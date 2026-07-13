@@ -65,36 +65,33 @@ const hideHeaderFooter = currentPath.includes('/demo/safe-area');
       </footer>
     )}
 
-    <script>
-      // ハンバーガーメニューの生JS実装
-      const btn = document.getElementById('hamburger-btn');
-      const menu = document.getElementById('mobile-menu');
-      const icon = document.getElementById('hamburger-icon');
+    <script lang="ts">
+      const btn = document.getElementById('hamburger-btn') as HTMLButtonElement | null;
+      const menu = document.getElementById('mobile-menu') as HTMLDivElement | null;
+      const icon = document.getElementById('hamburger-icon') as SVGElement | null;
 
       if (btn && menu) {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (): void => {
           menu.classList.toggle('hidden');
 
-          // アイコンを切り替え（メニュー開閉時）
           const isOpen = !menu.classList.contains('hidden');
           const hamburgerPath = 'M4 6h16M4 12h16M4 18h16';
           const closePath = 'M6 18L18 6M6 6l12 12';
 
-          if (icon && icon.querySelector('path')) {
-            const path = icon.querySelector('path');
+          if (icon) {
+            const path = icon.querySelector('path') as SVGPathElement | null;
             if (path) {
               path.setAttribute('d', isOpen ? closePath : hamburgerPath);
             }
           }
         });
 
-        // メニュー内のリンククリック時にメニューを閉じる
         const menuLinks = menu.querySelectorAll('a');
-        menuLinks.forEach(link => {
-          link.addEventListener('click', () => {
+        menuLinks.forEach((link: Element): void => {
+          link.addEventListener('click', (): void => {
             menu.classList.add('hidden');
-            if (icon && icon.querySelector('path')) {
-              const path = icon.querySelector('path');
+            if (icon) {
+              const path = icon.querySelector('path') as SVGPathElement | null;
               if (path) {
                 path.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
               }

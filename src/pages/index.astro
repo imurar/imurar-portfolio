@@ -150,15 +150,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
   </style>
 
-  <script>
-    function buildHero() {
-      const heroSection = document.getElementById('hero-section');
-      const heroSymbols = document.getElementById('hero-symbols');
+  <script lang="ts">
+    function buildHero(): void {
+      const heroSection = document.getElementById('hero-section') as HTMLElement | null;
+      const heroSymbols = document.getElementById('hero-symbols') as HTMLElement | null;
       if (!heroSymbols || !heroSection) return;
       heroSymbols.innerHTML = '';
 
       const sectionWidth = heroSection.offsetWidth;
-      const lines = ['CODE'];
+      const lines: string[] = ['CODE'];
       const REF = 200;
       const probe = document.createElement('canvas').getContext('2d');
       if (!probe) return;
@@ -175,7 +175,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       if (!ctx) return;
 
       ctx.font = `900 ${fontSize}px monospace`;
-      const lineWidths = lines.map(l => Math.ceil(ctx.measureText(l).width));
+      const lineWidths: number[] = lines.map(l => Math.ceil(ctx.measureText(l).width));
       const canvasW = Math.max(...lineWidths) + spacing * 2;
       const canvasH = lineH * lines.length + lineGap * (lines.length - 1);
 
@@ -183,7 +183,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       offscreen.height = canvasH;
       ctx.font = `900 ${fontSize}px monospace`;
       ctx.fillStyle = '#000';
-      lines.forEach((line, i) => {
+      lines.forEach((line: string, i: number): void => {
         const lx = Math.floor((canvasW - lineWidths[i]) / 2);
         ctx.fillText(line, lx, fontSize + i * (lineH + lineGap));
       });
@@ -225,9 +225,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       heroSymbols.appendChild(fragment);
     }
 
-    function onResize() {
-      clearTimeout(window.resizeTimer);
-      window.resizeTimer = setTimeout(buildHero, 200);
+    function onResize(): void {
+      clearTimeout((window as any).resizeTimer);
+      (window as any).resizeTimer = setTimeout(buildHero, 200);
     }
 
     buildHero();
