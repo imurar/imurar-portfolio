@@ -23,29 +23,41 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <h2 class="text-5xl font-mono font-bold mb-2">Selected <span class="text-gray-400">Works</span></h2>
         <p class="text-gray-300">これまで制作・コーディングを担当したサイトの一部をご紹介します。</p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+        <div class="bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition flex flex-col">
           <img src="/images/android.jpg" alt="Android 券売機アプリ開発" class="h-48 w-full object-cover">
-          <div class="p-6">
+          <div class="p-6 flex flex-col flex-1">
             <h3 class="text-xl font-bold mb-2">Android 券売機アプリ開発</h3>
-            <p class="text-sm text-gray-600 mb-4">飲食店向けセルフオーダー型 Android 券売機を 0 から設計・開発。釣銭機・決済端末・プリンターとのハードウェア連携、Node.js CMS バックエンドまでフルスタックで担当。</p>
-            <div class="text-xs text-gray-500">Role　Fullstack / Android</div>
+            <p class="text-sm text-gray-600 mb-4 flex-1">飲食店向けセルフオーダー型 Android 券売機を 0 から設計・開発。釣銭機・決済端末・プリンターとのハードウェア連携、Node.js CMS バックエンドまでフルスタックで担当。</p>
+            <div class="flex flex-wrap gap-1.5 mt-auto">
+              {['Kotlin', 'Android', 'Kotlin Coroutines', 'SQLite'].map(t => (
+                <span class="bg-gray-100 text-gray-700 text-xs font-medium px-2.5 py-1 rounded-full">{t}</span>
+              ))}
+            </div>
           </div>
         </div>
-        <div class="bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition">
+        <div class="bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition flex flex-col">
           <img src="/images/backend.jpg" alt="券売機向け CMS バックエンド" class="h-48 w-full object-cover">
-          <div class="p-6">
+          <div class="p-6 flex flex-col flex-1">
             <h3 class="text-xl font-bold mb-2">券売機向け CMS バックエンド</h3>
-            <p class="text-sm text-gray-600 mb-4">Android 券売機向け Web CMS と POS 連携 REST API を 0 から設計・開発。マルチテナント設計・スペック駆動開発・CI/CD 構築まで一貫して担当。</p>
-            <div class="text-xs text-gray-500">Role　Backend</div>
+            <p class="text-sm text-gray-600 mb-4 flex-1">Android 券売機向け Web CMS と POS 連携 REST API を 0 から設計・開発。マルチテナント設計・スペック駆動開発・CI/CD 構築まで一貫して担当。</p>
+            <div class="flex flex-wrap gap-1.5 mt-auto">
+              {['Node.js', 'TypeScript', 'Express', 'MongoDB', 'AWS', 'Docker'].map(t => (
+                <span class="bg-gray-100 text-gray-700 text-xs font-medium px-2.5 py-1 rounded-full">{t}</span>
+              ))}
+            </div>
           </div>
         </div>
-        <div class="bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition">
+        <div class="bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition flex flex-col">
           <img src="/images/mobile-order.jpg" alt="モバイルオーダーシステム保守・改修" class="h-48 w-full object-cover">
-          <div class="p-6">
+          <div class="p-6 flex flex-col flex-1">
             <h3 class="text-xl font-bold mb-2">モバイルオーダー保守・改修</h3>
-            <p class="text-sm text-gray-600 mb-4">約 120 店舗展開中の QR コード型モバイルオーダーシステムを担当。Node.js v12 → v24 のメジャーバージョンアップと AWS インフラ整備を主導。</p>
-            <div class="text-xs text-gray-500">Role　Backend / Infra</div>
+            <p class="text-sm text-gray-600 mb-4 flex-1">約 120 店舗展開中の QR コード型モバイルオーダーシステムを担当。Node.js v12 → v24 のメジャーバージョンアップと AWS インフラ整備を主導。</p>
+            <div class="flex flex-wrap gap-1.5 mt-auto">
+              {['Node.js', 'JavaScript', 'Express', 'Amazon DocumentDB', 'AWS', 'Docker'].map(t => (
+                <span class="bg-gray-100 text-gray-700 text-xs font-medium px-2.5 py-1 rounded-full">{t}</span>
+              ))}
+            </div>
           </div>
         </div>
       </div>
