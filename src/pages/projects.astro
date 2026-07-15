@@ -3,22 +3,36 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const projects = [
   {
-    title: 'Android 券売機システム（新規開発）',
+    title: 'Android 券売機アプリ（新規開発）',
     company: '飲食店向けシステム開発会社',
     period: '2025年10月 〜 現在',
     type: '0ベース新規開発',
     typeColor: 'bg-blue-100 text-blue-800',
-    description: '飲食店舗向けセルフオーダー型 Android 券売機システムを 0 から設計・開発。Kotlin による Android アプリと Node.js / Express による Web CMS・POS 連携 API をフルスタックで担当。約 10 店舗に展開中。',
+    description: '飲食店舗向けセルフオーダー型 Android 券売機アプリを 0 から設計・開発。現金・キャッシュレスの両決済に対応し、各種ハードウェアとの通信プロトコルを実装。約 10 店舗に展開中。',
     achievements: [
       'Kotlin による Android アプリ設計・実装（MVVM 構成・Kotlin Coroutines）',
       '釣銭機・決済端末・プリンターとのハードウェア通信プロトコル実装',
       '現金決済の障害リカバリーフロー設計（釣銭返却・強制完了・手動返金）',
+      'CMS から取得したメニューレイアウトを SQLite にキャッシュし、オフライン時も表示継続',
+      'バーコードスキャンによるクーポン読み取り・日次締め処理実装',
+    ],
+    tech: ['Kotlin', 'Android 13', 'MVVM', 'Kotlin Coroutines', 'SQLite', 'Gradle'],
+  },
+  {
+    title: '券売機向け CMS バックエンド（新規開発）',
+    company: '飲食店向けシステム開発会社',
+    period: '2025年10月 〜 現在',
+    type: '0ベース新規開発',
+    typeColor: 'bg-blue-100 text-blue-800',
+    description: 'Android 券売機向け Web CMS と POS 連携 REST API を設計・開発。マルチテナント設計・スペック駆動開発・CI/CD 構築まで一貫して担当。',
+    achievements: [
       'Node.js / Express 5 による Web CMS・POS 連携 REST API の設計・実装',
-      'N+1 クエリ回避・マルチテナント設計（Company → Branch → User 階層）',
+      'マルチテナント設計（Company → Branch → User 階層、全クエリに branch 条件を強制）',
+      'N+1 クエリ回避・ヘルスチェック API など API 設計工夫',
       'スペック駆動開発（PRD・機能設計書・アーキテクチャ設計書・開発ガイドラインを整備）',
       'Bitbucket Pipelines による staging / production への CI/CD 自動デプロイ',
     ],
-    tech: ['Kotlin', 'Node.js', 'TypeScript', 'Express 5', 'MongoDB', 'AWS EC2', 'S3', 'Docker', 'Bitbucket Pipelines'],
+    tech: ['Node.js', 'TypeScript', 'Express 5', 'MongoDB', 'AWS EC2', 'S3', 'Docker', 'Bitbucket Pipelines'],
   },
   {
     title: 'モバイルオーダーシステム（保守・改修）',
