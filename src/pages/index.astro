@@ -24,7 +24,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p class="text-gray-300">これまで制作・コーディングを担当したサイトの一部をご紹介します。</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-        <div class="bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition flex flex-col">
+        <div class="work-card bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition flex flex-col cursor-pointer" data-project="android">
           <img src="/images/android.jpg" alt="Android 券売機アプリ開発" class="h-48 w-full object-cover">
           <div class="p-6 flex flex-col flex-1">
             <h3 class="text-xl font-bold mb-2">Android 券売機アプリ開発</h3>
@@ -36,7 +36,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
           </div>
         </div>
-        <div class="bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition flex flex-col">
+        <div class="work-card bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition flex flex-col cursor-pointer" data-project="cms">
           <img src="/images/backend.jpg" alt="券売機向け CMS バックエンド" class="h-48 w-full object-cover">
           <div class="p-6 flex flex-col flex-1">
             <h3 class="text-xl font-bold mb-2">券売機向け CMS バックエンド</h3>
@@ -48,7 +48,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
           </div>
         </div>
-        <div class="bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition flex flex-col">
+        <div class="work-card bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition flex flex-col cursor-pointer" data-project="mobile-order">
           <img src="/images/mobile-order.jpg" alt="モバイルオーダーシステム保守・改修" class="h-48 w-full object-cover">
           <div class="p-6 flex flex-col flex-1">
             <h3 class="text-xl font-bold mb-2">モバイルオーダー保守・改修</h3>
@@ -59,6 +59,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               ))}
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- Project modal -->
+      <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4" role="dialog" aria-modal="true">
+        <div id="modal-backdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+        <div class="relative bg-white rounded-2xl w-full max-w-2xl max-h-[85vh] overflow-y-auto shadow-2xl">
+          <button id="modal-close" aria-label="閉じる" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 transition p-1">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <div id="modal-body" class="p-8"></div>
         </div>
       </div>
       <div class="mt-8 text-center">
@@ -166,5 +179,107 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     import { buildHero, onResize } from '../scripts/hero';
     buildHero();
     window.addEventListener('resize', onResize);
+  </script>
+
+  <script>
+    const projects: Record<string, {
+      title: string;
+      period: string;
+      type: string;
+      description: string;
+      achievements: string[];
+      tech: string[];
+    }> = {
+      android: {
+        title: 'Android 券売機アプリ開発',
+        period: '2025年10月 〜 現在',
+        type: '0ベース新規開発',
+        description: '飲食店舗向けセルフオーダー型 Android 券売機アプリを 0 から設計・開発。現金・キャッシュレスの両決済に対応し、各種ハードウェアとの通信プロトコルを実装。約 10 店舗に展開中。',
+        achievements: [
+          'Kotlin による Android アプリ設計・実装（MVVM 構成・Kotlin Coroutines）',
+          '釣銭機・決済端末・プリンターとのハードウェア通信プロトコル実装',
+          '現金決済の障害リカバリーフロー設計（釣銭返却・強制完了・手動返金）',
+          'CMS から取得したメニューレイアウトを SQLite にキャッシュし、オフライン時も表示継続',
+          'バーコードスキャンによるクーポン読み取り・日次締め処理実装',
+        ],
+        tech: ['Kotlin', 'Android', 'Kotlin Coroutines', 'SQLite'],
+      },
+      cms: {
+        title: '券売機向け CMS バックエンド',
+        period: '2025年10月 〜 現在',
+        type: '0ベース新規開発',
+        description: 'Android 券売機向け Web CMS と POS 連携 REST API を設計・開発。マルチテナント設計・スペック駆動開発・CI/CD 構築まで一貫して担当。',
+        achievements: [
+          'Node.js / Express 5 による Web CMS・POS 連携 REST API の設計・実装',
+          'マルチテナント設計（Company → Branch → User 階層、全クエリに branch 条件を強制）',
+          'N+1 クエリ回避・ヘルスチェック API など API 設計工夫',
+          'スペック駆動開発（PRD・機能設計書・アーキテクチャ設計書・開発ガイドラインを整備）',
+          'Bitbucket Pipelines による staging / production への CI/CD 自動デプロイ',
+        ],
+        tech: ['Node.js', 'TypeScript', 'Express', 'MongoDB', 'AWS', 'Docker'],
+      },
+      'mobile-order': {
+        title: 'モバイルオーダーシステム保守・改修',
+        period: '2025年10月 〜 現在',
+        type: '保守・機能改修',
+        description: '飲食店向け QR コードモバイルオーダーシステムの保守・改修。約 120 店舗展開中のシステムで、Node.js v12 → v24 への複数メジャーバージョンを跨ぐアップグレードとインフラ整備を担当。',
+        achievements: [
+          'Node.js v12 → v24 メジャーバージョンアップ（複数バージョンを跨ぐ互換性対応を主導）',
+          'Socket.IO v4 / fast-xml-parser v4 / connect-mongo v6 / Mongoose 8 移行対応',
+          'AWS SDK v2 → v3（@aws-sdk/client-s3）移行',
+          'Amazon DocumentDB への MongoDB 移行（TLS/SSL 対応）',
+          '本番・STG が同居していた EC2 を分離し、本番・ステージング環境をそれぞれ独立して構築',
+        ],
+        tech: ['Node.js', 'JavaScript', 'Express', 'Amazon DocumentDB', 'AWS', 'Docker'],
+      },
+    };
+
+    const modal = document.getElementById('project-modal')!;
+    const modalBody = document.getElementById('modal-body')!;
+    const backdrop = document.getElementById('modal-backdrop')!;
+    const closeBtn = document.getElementById('modal-close')!;
+
+    function openModal(id: string) {
+      const p = projects[id];
+      if (!p) return;
+      modalBody.innerHTML = `
+        <div class="mb-1">
+          <span class="inline-block text-xs font-semibold px-3 py-1 rounded-full bg-gray-100 text-gray-600 mb-3">${p.type}</span>
+          <h2 class="text-2xl font-bold text-gray-900 mb-1">${p.title}</h2>
+          <p class="text-sm text-gray-400 mb-5">${p.period}</p>
+        </div>
+        <p class="text-gray-700 leading-relaxed mb-6">${p.description}</p>
+        <div class="mb-6">
+          <h3 class="text-sm font-semibold text-gray-900 mb-3">実績・対応内容</h3>
+          <ul class="space-y-2">
+            ${p.achievements.map(a => `
+              <li class="flex gap-3 text-sm text-gray-700">
+                <span class="text-gray-400 shrink-0 mt-0.5">✓</span>
+                <span>${a}</span>
+              </li>
+            `).join('')}
+          </ul>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          ${p.tech.map(t => `<span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full">${t}</span>`).join('')}
+        </div>
+      `;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll<HTMLElement>('.work-card').forEach(card => {
+      card.addEventListener('click', () => openModal(card.dataset.project!));
+    });
+    backdrop.addEventListener('click', closeModal);
+    closeBtn.addEventListener('click', closeModal);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
   </script>
 </BaseLayout>
