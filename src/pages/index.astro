@@ -25,9 +25,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
         <div class="work-card bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition flex flex-col cursor-pointer" data-project="android">
-          <img src="/images/android.jpg" alt="Android 券売機アプリ開発" class="h-48 w-full object-cover">
+          <img src="/images/android.jpg" alt="Android アプリ開発" class="h-48 w-full object-cover">
           <div class="p-6 flex flex-col flex-1">
-            <h3 class="text-xl font-bold mb-2">Android 券売機アプリ開発</h3>
+            <h3 class="text-xl font-bold mb-2">Android アプリ開発</h3>
             <p class="text-sm text-gray-600 mb-4 flex-1">飲食店向けセルフオーダー型 Android 券売機を 0 から設計・開発。釣銭機・決済端末・プリンターとのハードウェア連携、Node.js CMS バックエンドまでフルスタックで担当。</p>
             <div class="flex flex-wrap gap-1.5 mt-auto">
               {['Kotlin', 'Android', 'Kotlin Coroutines', 'SQLite'].map(t => (
@@ -37,9 +37,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
         </div>
         <div class="work-card bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition flex flex-col cursor-pointer" data-project="cms">
-          <img src="/images/backend.jpg" alt="券売機向け CMS バックエンド" class="h-48 w-full object-cover">
+          <img src="/images/backend.jpg" alt="セルフオーダー管理バックエンド" class="h-48 w-full object-cover">
           <div class="p-6 flex flex-col flex-1">
-            <h3 class="text-xl font-bold mb-2">券売機向け CMS バックエンド</h3>
+            <h3 class="text-xl font-bold mb-2">セルフオーダー管理バックエンド</h3>
             <p class="text-sm text-gray-600 mb-4 flex-1">Android 券売機向け Web CMS と POS 連携 REST API を 0 から設計・開発。マルチテナント設計・スペック駆動開発・CI/CD 構築まで一貫して担当。</p>
             <div class="flex flex-wrap gap-1.5 mt-auto">
               {['Node.js', 'TypeScript', 'Express', 'MongoDB', 'AWS', 'Docker'].map(t => (
@@ -191,10 +191,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       tech: string[];
     }> = {
       android: {
-        title: 'Android 券売機アプリ開発',
+        title: 'Android アプリ開発',
         period: '2025年10月 〜 現在',
         type: '0ベース新規開発',
-        description: '飲食店舗向けセルフオーダー型 Android 券売機アプリを 0 から設計・開発。現金・キャッシュレスの両決済に対応し、各種ハードウェアとの通信プロトコルを実装。約 10 店舗に展開中。',
+        description: '飲食店舗向けセルフオーダー型 Android アプリを 0 から設計・開発。現金・キャッシュレスの両決済に対応し、各種ハードウェアとの通信プロトコルを実装。約 10 店舗に展開中。',
         achievements: [
           'Kotlin による Android アプリ設計・実装（MVVM 構成・Kotlin Coroutines）',
           '釣銭機・決済端末・プリンターとのハードウェア通信プロトコル実装',
@@ -205,7 +205,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         tech: ['Kotlin', 'Android', 'Kotlin Coroutines', 'SQLite'],
       },
       cms: {
-        title: '券売機向け CMS バックエンド',
+        title: 'セルフオーダー管理バックエンド',
         period: '2025年10月 〜 現在',
         type: '0ベース新規開発',
         description: 'Android 券売機向け Web CMS と POS 連携 REST API を設計・開発。マルチテナント設計・スペック駆動開発・CI/CD 構築まで一貫して担当。',
