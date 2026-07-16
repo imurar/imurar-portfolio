@@ -1,9 +1,13 @@
 ---
 export interface Props {
   title?: string;
+  description?: string;
 }
 
-const { title = 'imurar - Portfolio' } = Astro.props;
+const {
+  title = 'imuracode | Web & Android Engineer',
+  description = 'Web・Androidエンジニアのポートフォリオサイト Node.js / TypeScript / Kotlin を中心に、バックエンドからモバイルアプリまでフルスタックで開発します',
+} = Astro.props;
 const currentPath = Astro.url.pathname;
 const hideHeaderFooter = currentPath.includes('/demo/safe-area');
 ---
@@ -14,7 +18,9 @@ const hideHeaderFooter = currentPath.includes('/demo/safe-area');
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
+    <meta name="description" content={description} />
     <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
     <meta property="og:image" content="https://imurar.github.io/favicon.png" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
