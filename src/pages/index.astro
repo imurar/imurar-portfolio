@@ -4,36 +4,56 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="imogx - Portfolio">
   <!-- ヒーロー -->
-  <section class="relative min-h-screen flex items-center justify-center py-12 overflow-hidden" style="background: linear-gradient(135deg, #f0f9ff 0%, #fef2f2 100%); background-image: url('/bg-blob1.png'), url('/bg-blob2.png'); background-size: 700px auto, 750px auto; background-position: right -100px top -50px, right 120px bottom -130px; background-repeat: no-repeat, no-repeat; animation: bgFadeIn 1.2s ease-out;">
+  <section class="relative min-h-screen md:min-h-screen flex items-center justify-center py-16 md:py-12 overflow-hidden" style="background: linear-gradient(135deg, #f0f9ff 0%, #fef2f2 100%); animation: bgFadeIn 1.2s ease-out;">
+
+    <div class="hero-bg-blobs absolute inset-0"></div>
 
     <div class="max-w-7xl mx-auto px-6 w-full relative z-10" style="animation: heroSlideUp 1s ease-out;">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center auto-rows-max">
         <!-- 左側：テキスト -->
-        <div class="pt-12">
-          <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
+        <div class="pt-0 md:pt-12">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 md:mb-8 leading-tight">
             Backend &<br />Cloud Engineer
           </h1>
-          <p class="text-lg text-gray-700 mb-10 leading-relaxed">
+          <p class="text-base md:text-lg text-gray-700 mb-8 md:mb-10 leading-relaxed">
             確かな技術で、バックエンド開発からクラウドインフラまで支えます。
           </p>
-          <div class="flex flex-wrap gap-3 mb-10">
-            <span class="px-4 py-2 bg-blue-100 text-blue-700 text-sm font-semibold rounded-full">Node.js</span>
-            <span class="px-4 py-2 bg-purple-100 text-purple-700 text-sm font-semibold rounded-full">Android</span>
-            <span class="px-4 py-2 bg-orange-100 text-orange-700 text-sm font-semibold rounded-full">AWS</span>
+          <div class="flex flex-wrap gap-2 md:gap-3 mb-8 md:mb-10">
+            <span class="px-3 md:px-4 py-2 bg-blue-100 text-blue-700 text-xs md:text-sm font-semibold rounded-full">Node.js</span>
+            <span class="px-3 md:px-4 py-2 bg-purple-100 text-purple-700 text-xs md:text-sm font-semibold rounded-full">Android</span>
+            <span class="px-3 md:px-4 py-2 bg-orange-100 text-orange-700 text-xs md:text-sm font-semibold rounded-full">AWS</span>
           </div>
-          <a href="/contact" class="inline-block bg-gray-900 text-white font-semibold px-8 py-3 rounded-lg hover:bg-gray-800 transition">
-            Contact
+          <a href="/projects" class="inline-flex items-center gap-2 text-gray-900 hover:text-gray-600 font-semibold transition">
+            View Projects
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
           </a>
         </div>
 
         <!-- 右側：アイコン -->
-        <div class="flex justify-center relative pt-8">
-          <img src="/icon.png" alt="imogx" class="w-full max-w-lg object-contain drop-shadow-xl relative z-20" style="animation: bgFadeIn 1s ease-out 0.4s both;" />
+        <div class="flex justify-center relative pt-4 md:pt-8">
+          <img src="/icon.png" alt="imogx" class="w-4/5 md:w-full max-w-lg object-contain drop-shadow-xl relative z-20" style="animation: bgFadeIn 1s ease-out 0.4s both;" />
         </div>
       </div>
     </div>
 
     <style>
+      .hero-bg-blobs {
+        background-image: url('/bg-blob1.png'), url('/bg-blob2.png');
+        background-size: 700px auto, 750px auto;
+        background-position: right -100px top -50px, right 120px bottom -130px;
+        background-repeat: no-repeat, no-repeat;
+        pointer-events: none;
+      }
+
+      @media (max-width: 767px) {
+        .hero-bg-blobs {
+          background-size: 520px auto, 750px auto;
+          background-position: right 20px top 240px, right 120px bottom -130px;
+        }
+      }
+
       @keyframes bgFadeIn {
         from { opacity: 0; }
         to { opacity: 1; }
