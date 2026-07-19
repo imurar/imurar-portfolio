@@ -1,4 +1,4 @@
-# imurar HPサイト
+# imogx HPサイト
 
 Astro + Tailwind CSS で構築した静的生成ポートフォリオサイトです。
 
