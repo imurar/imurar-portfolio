@@ -62,33 +62,33 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <img src="/images/android.jpg" alt="Android アプリ開発" class="h-48 w-full object-cover">
           <div class="p-6 flex flex-col flex-1">
             <h3 class="text-xl font-bold mb-2">Android アプリ開発</h3>
-            <p class="text-sm text-gray-600 mb-4 flex-1">飲食店向けセルフオーダー型 Android 券売機を 0 から設計・開発。釣銭機・決済端末・プリンターとのハードウェア連携、Node.js CMS バックエンドまで対応。</p>
+            <p class="text-sm text-gray-600 mb-4 flex-1">飲食店向けセルフオーダー券売機をゼロから設計・開発。決済端末・プリンターとのハードウェア連携や、REST API との通信、ローカルデータ管理まで担当。</p>
             <div class="flex flex-wrap gap-1.5 mt-auto">
-              {['Kotlin', 'Android', 'Kotlin Coroutines', 'SQLite'].map(t => (
+              {['Kotlin', 'Android', 'Coroutines', 'MVVM', 'SQLite', 'REST API'].map(t => (
                 <span class="bg-gray-100 text-gray-700 text-xs font-medium px-2.5 py-1 rounded-full">{t}</span>
               ))}
             </div>
           </div>
         </div>
         <div class="work-card bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition flex flex-col cursor-pointer" data-project="cms">
-          <img src="/images/backend.jpg" alt="セルフオーダー管理バックエンド" class="h-48 w-full object-cover">
+          <img src="/images/backend.jpg" alt="Web API・バックエンド開発" class="h-48 w-full object-cover">
           <div class="p-6 flex flex-col flex-1">
-            <h3 class="text-xl font-bold mb-2">セルフオーダー管理バックエンド</h3>
-            <p class="text-sm text-gray-600 mb-4 flex-1">Android 券売機向け Web CMS と POS 連携 REST API を 0 から設計・開発。マルチテナント設計・スペック駆動開発・CI/CD 構築まで一貫して担当。</p>
+            <h3 class="text-xl font-bold mb-2">Web API・バックエンド開発</h3>
+            <p class="text-sm text-gray-600 mb-4 flex-1">Android 券売機向け Web CMS・POS 連携 REST API を設計・開発。マルチテナント対応や CI/CD を含め、設計から運用まで一貫して担当。</p>
             <div class="flex flex-wrap gap-1.5 mt-auto">
-              {['Node.js', 'TypeScript', 'Express', 'MongoDB', 'AWS', 'Docker'].map(t => (
+              {['Node.js', 'TypeScript', 'Express', 'MongoDB', 'Docker', 'AWS'].map(t => (
                 <span class="bg-gray-100 text-gray-700 text-xs font-medium px-2.5 py-1 rounded-full">{t}</span>
               ))}
             </div>
           </div>
         </div>
         <div class="work-card bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition flex flex-col cursor-pointer" data-project="mobile-order">
-          <img src="/images/mobile-order.jpg" alt="モバイルオーダーシステム保守・改修" class="h-48 w-full object-cover">
+          <img src="/images/server.png" alt="AWS 運用・インフラ改善" class="h-48 w-full object-cover">
           <div class="p-6 flex flex-col flex-1">
-            <h3 class="text-xl font-bold mb-2">モバイルオーダー保守・改修</h3>
-            <p class="text-sm text-gray-600 mb-4 flex-1">約 120 店舗展開中の QR コード型モバイルオーダーシステムを担当。Node.js v12 → v24 のメジャーバージョンアップと AWS インフラ整備を主導。</p>
+            <h3 class="text-xl font-bold mb-2">AWS 運用・インフラ改善</h3>
+            <p class="text-sm text-gray-600 mb-4 flex-1">約 120 店舗展開中のモバイルオーダーシステムにおいて、Node.js メジャーバージョンアップ、本番 AWS 環境の構築・改善、CI/CD 整備、DocumentDB 移行など運用基盤を担当。</p>
             <div class="flex flex-wrap gap-1.5 mt-auto">
-              {['Node.js', 'JavaScript', 'Express', 'Amazon DocumentDB', 'AWS', 'Docker'].map(t => (
+              {['AWS', 'Docker', 'Node.js', 'DocumentDB', 'Linux', 'CI/CD'].map(t => (
                 <span class="bg-gray-100 text-gray-700 text-xs font-medium px-2.5 py-1 rounded-full">{t}</span>
               ))}
             </div>
@@ -162,8 +162,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="flex gap-6">
             <span class="text-gray-400 text-3xl font-light">01</span>
             <div>
-              <h3 class="text-2xl font-light mb-3">フロントエンド開発</h3>
-              <p class="text-gray-400">HTML / CSS / JavaScript / Vue.js を用いたフロントエンド開発。デザインデータから実装まで対応します。</p>
+              <h3 class="text-2xl font-light mb-3">Android アプリ開発</h3>
+              <p class="text-gray-400">Kotlin による Android アプリケーション開発。業務端末・券売機・POS などのハードウェア連携や、REST API との通信を含めたアプリを設計・開発します。</p>
             </div>
           </div>
         </div>
@@ -171,8 +171,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="flex gap-6">
             <span class="text-gray-400 text-3xl font-light">02</span>
             <div>
-              <h3 class="text-2xl font-light mb-3">バックエンド開発</h3>
-              <p class="text-gray-400">Node.js / PHP / Python など、幅広い言語によるバックエンド開発。AWS インフラにも対応。</p>
+              <h3 class="text-2xl font-light mb-3">バックエンド・API 開発</h3>
+              <p class="text-gray-400">Node.js / Express を用いた Web API 開発。REST API の設計・実装からデータベース設計、CMS・POS 連携まで対応します。</p>
             </div>
           </div>
         </div>
@@ -180,8 +180,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="flex gap-6">
             <span class="text-gray-400 text-3xl font-light">03</span>
             <div>
-              <h3 class="text-2xl font-light mb-3">モバイル開発</h3>
-              <p class="text-gray-400">Kotlin / Android による、スマートフォンアプリケーション開発。バックエンド と の統合対応も可能。</p>
+              <h3 class="text-2xl font-light mb-3">AWS・インフラ構築</h3>
+              <p class="text-gray-400">AWS を利用した本番環境の構築・運用。EC2・DocumentDB・Docker・CI/CD・監視まで、安定したサービス運用を支えるインフラを構築します。</p>
             </div>
           </div>
         </div>
