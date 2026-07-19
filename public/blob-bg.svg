@@ -1,0 +1,36 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 w-full h-full" style="z-index: -1;">
+  <defs>
+    <filter id="blur1">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="40" />
+    </filter>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#93c5e8;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#d8b4fe;stop-opacity:0.4" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fecaca;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#c084fc;stop-opacity:0.3" />
+    </linearGradient>
+    <style>
+      @keyframes floatBlob1 {
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        50% { transform: translate(20px, -30px) scale(1.05); }
+      }
+      @keyframes floatBlob2 {
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        50% { transform: translate(-15px, 25px) scale(0.95); }
+      }
+      @keyframes floatBlob3 {
+        0%, 100% { transform: translate(0, 0); }
+        50% { transform: translate(25px, 20px); }
+      }
+      .blob1 { animation: floatBlob1 6s ease-in-out infinite; }
+      .blob2 { animation: floatBlob2 8s ease-in-out infinite; }
+      .blob3 { animation: floatBlob3 7s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <ellipse cx="900" cy="250" rx="280" ry="240" fill="url(#grad1)" filter="url(#blur1)" class="blob1" />
+  <ellipse cx="950" cy="180" rx="150" ry="180" fill="url(#grad2)" filter="url(#blur1)" class="blob2" />
+  <ellipse cx="850" cy="350" rx="120" ry="140" fill="url(#grad1)" filter="url(#blur1)" class="blob3" opacity="0.6" />
+</svg>
