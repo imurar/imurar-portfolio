@@ -71,9 +71,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
         </div>
         <div class="work-card bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition flex flex-col cursor-pointer" data-project="cms">
-          <img src="/images/backend.jpg" alt="Web API・バックエンド開発" class="h-48 w-full object-cover">
+          <img src="/images/backend.jpg" alt="セルフオーダー管理バックエンド" class="h-48 w-full object-cover">
           <div class="p-6 flex flex-col flex-1">
-            <h3 class="text-xl font-bold mb-2">Web API・バックエンド開発</h3>
+            <h3 class="text-xl font-bold mb-2">セルフオーダー管理バックエンド</h3>
             <p class="text-sm text-gray-600 mb-4 flex-1">Android 券売機向け Web CMS・POS 連携 REST API を設計・開発。マルチテナント対応や CI/CD を含め、設計から運用まで一貫して担当。</p>
             <div class="flex flex-wrap gap-1.5 mt-auto">
               {['Node.js', 'TypeScript', 'Express', 'MongoDB', 'Docker', 'AWS'].map(t => (
@@ -83,9 +83,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
         </div>
         <div class="work-card bg-white text-gray-900 rounded-lg overflow-hidden hover:shadow-lg transition flex flex-col cursor-pointer" data-project="mobile-order">
-          <img src="/images/server.png" alt="AWS 運用・インフラ改善" class="h-48 w-full object-cover">
+          <img src="/images/server.png" alt="AWS・インフラ構築・運用" class="h-48 w-full object-cover">
           <div class="p-6 flex flex-col flex-1">
-            <h3 class="text-xl font-bold mb-2">AWS 運用・インフラ改善</h3>
+            <h3 class="text-xl font-bold mb-2">AWS・インフラ構築・運用</h3>
             <p class="text-sm text-gray-600 mb-4 flex-1">約 120 店舗展開中のモバイルオーダーシステムにおいて、Node.js メジャーバージョンアップ、本番 AWS 環境の構築・改善、CI/CD 整備、DocumentDB 移行など運用基盤を担当。</p>
             <div class="flex flex-wrap gap-1.5 mt-auto">
               {['AWS', 'Docker', 'Node.js', 'DocumentDB', 'Linux', 'CI/CD'].map(t => (
@@ -99,13 +99,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <!-- Project modal -->
       <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4" role="dialog" aria-modal="true">
         <div id="modal-backdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
-        <div class="relative bg-white rounded-2xl w-full max-w-2xl max-h-[85vh] overflow-y-auto shadow-2xl">
-          <button id="modal-close" aria-label="閉じる" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 transition p-1">
+        <div class="relative bg-white rounded-2xl w-full max-w-2xl max-h-[85vh] shadow-2xl flex flex-col">
+          <button id="modal-close" aria-label="閉じる" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 transition p-1 z-10">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
-          <div id="modal-body" class="p-8"></div>
+          <div id="modal-body" class="p-8 overflow-y-auto flex-1"></div>
+          <div class="border-t border-gray-200 p-4 flex justify-center shrink-0">
+            <button class="modal-close-btn px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition font-semibold">
+              閉じる
+            </button>
+          </div>
         </div>
       </div>
       <div class="mt-8 text-center">
@@ -211,48 +216,61 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       description: string;
       achievements: string[];
       tech: string[];
+      responsibility?: string;
     }> = {
       android: {
         title: 'Android アプリ開発',
-        period: '2025年10月 〜 現在',
+        period: '2025年10月 ～ 現在',
         type: '0ベース新規開発',
-        description: '飲食店舗向けセルフオーダー型 Android アプリを 0 から設計・開発。現金・キャッシュレスの両決済に対応し、各種ハードウェアとの通信プロトコルを実装。約 10 店舗に展開中。',
+        responsibility: '設計 / 実装 / テスト',
+        description: '飲食店向けセルフオーダー Android アプリをゼロから設計・開発。現金・キャッシュレス決済に対応し、釣銭機・決済端末・プリンターとのハードウェア連携を実装しました。\n\nCMS から取得したメニュー情報の表示、REST API 連携、オフライン時の表示継続、障害発生時のリカバリー処理まで対応し、約 10 店舗で運用されています。',
         achievements: [
-          'Kotlin による Android アプリ設計・実装（MVVM 構成・Kotlin Coroutines）',
+          'Kotlin による Android アプリの設計・実装（MVVM 構成・Kotlin Coroutines）',
           '釣銭機・決済端末・プリンターとのハードウェア通信プロトコル実装',
-          '現金決済の障害リカバリーフロー設計（釣銭返却・強制完了・手動返金）',
-          'CMS から取得したメニューレイアウトを SQLite にキャッシュし、オフライン時も表示継続',
-          'バーコードスキャンによるクーポン読み取り・日次締め処理実装',
+          '現金・キャッシュレス決済フローの設計・実装',
+          '現金決済時の障害リカバリーフロー設計（釣銭返却・強制完了・手動返金）',
+          'バックエンド API との通信機能を実装',
+          'CMS から取得したメニュー情報を SQLite へキャッシュし、オフライン時も表示を継続',
+          'バーコードスキャンによるクーポン読み取り機能の実装',
+          '日次締め処理など、店舗運用に必要な業務機能の実装',
         ],
-        tech: ['Kotlin', 'Android', 'Kotlin Coroutines', 'SQLite'],
+        tech: ['Kotlin', 'Android', 'MVVM', 'Kotlin Coroutines', 'OkHttp', 'SQLite'],
       },
       cms: {
         title: 'セルフオーダー管理バックエンド',
-        period: '2025年10月 〜 現在',
+        period: '2025年10月 ～ 現在',
         type: '0ベース新規開発',
-        description: 'Android 券売機向け Web CMS と POS 連携 REST API を設計・開発。マルチテナント設計・スペック駆動開発・CI/CD 構築まで一貫して担当。',
+        responsibility: '設計 / 実装 / テスト',
+        description: 'Android 券売機向け Web CMS と POS 連携 REST API をゼロから設計・開発。\nマルチテナント対応、スペック駆動開発により、拡張性と保守性の高い API を実装。\n\n複数店舗・複数システムとの連携を実現し、スケーラブルなバックエンドアーキテクチャを構築しています。',
         achievements: [
-          'Node.js / Express 5 による Web CMS・POS 連携 REST API の設計・実装',
-          'マルチテナント設計（Company → Branch → User 階層、全クエリに branch 条件を強制）',
-          'N+1 クエリ回避・ヘルスチェック API など API 設計工夫',
-          'スペック駆動開発（PRD・機能設計書・アーキテクチャ設計書・開発ガイドラインを整備）',
-          'Bitbucket Pipelines による staging / production への CI/CD 自動デプロイ',
+          'Node.js・Express によるREST API の設計・実装（OpenAPI 仕様書作成）',
+          'マルチテナント設計（Company→Branch→User 階層）',
+          'MongoDB のスキーマ設計・クエリ最適化',
+          'ページネーション・クエリ最適化によるパフォーマンス改善',
+          'TypeScript による型安全な設計・実装',
+          'エラーハンドリング、ロギング、ヘルスチェック API の実装',
+          '仕様駆動開発による設計書・開発ガイドラインの整備',
+          'Jest によるユニットテスト・API テストの実装',
         ],
-        tech: ['Node.js', 'TypeScript', 'Express', 'MongoDB', 'AWS', 'Docker'],
+        tech: ['Node.js', 'TypeScript', 'Express', 'MongoDB', 'Docker', 'Jest'],
       },
       'mobile-order': {
-        title: 'モバイルオーダーシステム保守・改修',
-        period: '2025年10月 〜 現在',
+        title: 'AWS・インフラ構築・運用',
+        period: '2025年10月 ～ 現在',
         type: '保守・機能改修',
-        description: '飲食店向け QR コードモバイルオーダーシステムの保守・改修。約 120 店舗展開中のシステムで、Node.js v12 → v24 への複数メジャーバージョンを跨ぐアップグレードとインフラ整備を担当。',
+        responsibility: '設計 / 実装 / 運用',
+        description: '飲食店向けモバイルオーダーシステムの本番環境構築・運用を担当。約 120 店舗で稼働するシステムにおいて、Node.js のメジャーバージョンアップ、AWS インフラの構築・改善、本番・ステージング環境の分離構築を実施しました。\n\nDocker 環境の最適化や CI/CD の導入、監視基盤の整備を通じて、システムの安定性向上と運用効率化に取り組んでいます。',
         achievements: [
-          'Node.js v12 → v24 メジャーバージョンアップ（複数バージョンを跨ぐ互換性対応を主導）',
-          'Socket.IO v4 / fast-xml-parser v4 / connect-mongo v6 / Mongoose 8 移行対応',
-          'AWS SDK v2 → v3（@aws-sdk/client-s3）移行',
-          'Amazon DocumentDB への MongoDB 移行（TLS/SSL 対応）',
-          '本番・STG が同居していた EC2 を分離し、本番・ステージング環境をそれぞれ独立して構築',
+          'Node.js v12 → v24 へのメジャーバージョンアップ対応（互換性検証・依存ライブラリ更新）',
+          'AWS インフラの設計・構築（EC2・ALB・Route 53・CloudWatch）',
+          'Amazon DocumentDB へのデータベース移行（TLS/SSL 暗号化通信対応）',
+          '本番・ステージング環境の分離構築',
+          'Nginx によるリバースプロキシ設定・メンテナンスページ切替・SSL終端',
+          'Docker コンテナイメージの最適化',
+          'forever から systemd への移行によるサービス管理の標準化',
+          'Bitbucket Pipelines を利用した CI/CD パイプラインの導入・構築',
         ],
-        tech: ['Node.js', 'JavaScript', 'Express', 'Amazon DocumentDB', 'AWS', 'Docker'],
+        tech: ['AWS', 'EC2', 'Linux', 'Docker', 'Nginx', 'systemd', 'DocumentDB', 'CloudWatch', 'Bitbucket Pipelines'],
       },
     };
 
@@ -270,7 +288,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h2 class="text-2xl font-bold text-gray-900 mb-1">${p.title}</h2>
           <p class="text-sm text-gray-400 mb-5">${p.period}</p>
         </div>
-        <p class="text-gray-700 leading-relaxed mb-6">${p.description}</p>
+        ${p.responsibility ? `<p class="text-sm text-gray-600 font-semibold mb-4">担当範囲<br />${p.responsibility}</p>` : ''}
+        <p class="text-gray-700 leading-relaxed mb-6 whitespace-pre-wrap">${p.description}</p>
         <div class="mb-6">
           <h3 class="text-sm font-semibold text-gray-900 mb-3">実績・対応内容</h3>
           <ul class="space-y-2">
@@ -302,6 +321,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     });
     backdrop.addEventListener('click', closeModal);
     closeBtn.addEventListener('click', closeModal);
+    document.querySelectorAll<HTMLElement>('.modal-close-btn').forEach(btn => {
+      btn.addEventListener('click', closeModal);
+    });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
   </script>
 </BaseLayout>
