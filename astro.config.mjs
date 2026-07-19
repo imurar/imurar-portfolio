@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://imurar.github.io',
+  site: 'https://imogx.github.io',
   output: 'static'
 });
